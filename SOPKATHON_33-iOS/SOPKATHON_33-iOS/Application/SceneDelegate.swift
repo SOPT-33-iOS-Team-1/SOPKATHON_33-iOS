@@ -20,11 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(windowScene: windowScene)
         window?.overrideUserInterfaceStyle = .light
         
-//        let mainViewController = MainViewController()
-//        let navigationController = UINavigationController(rootViewController: mainViewController)
-//
-//        navigationController.isNavigationBarHidden = true
-//        self.window?.rootViewController = navigationController
+        let mainViewController = ViewController()
+        let navigationController = UINavigationController(rootViewController: mainViewController)
+
+        navigationController.isNavigationBarHidden = true
+        self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
     }
     

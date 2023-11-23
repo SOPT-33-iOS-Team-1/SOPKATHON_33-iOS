@@ -16,6 +16,7 @@
 		D28379A42B0FB84300A1903B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A32B0FB84300A1903B /* Then */; };
 		D28379A72B0FB86500A1903B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A62B0FB86500A1903B /* Moya */; };
 		D28379AA2B0FB87200A1903B /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A92B0FB87200A1903B /* Kingfisher */; };
+		D28379AF2B0FBB7C00A1903B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28379AE2B0FBB7C00A1903B /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D206CAE02B0FB74A007ECC1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D206CAE32B0FB74A007ECC1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D206CAE52B0FB74A007ECC1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D28379AE2B0FBB7C00A1903B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,14 +64,87 @@
 		D206CAD62B0FB748007ECC1B /* SOPKATHON_33-iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D206CAD72B0FB748007ECC1B /* AppDelegate.swift */,
-				D206CAD92B0FB748007ECC1B /* SceneDelegate.swift */,
-				D206CADB2B0FB748007ECC1B /* ViewController.swift */,
-				D206CAE02B0FB74A007ECC1B /* Assets.xcassets */,
-				D206CAE22B0FB74A007ECC1B /* LaunchScreen.storyboard */,
+				D28379B32B0FBBB200A1903B /* Global */,
+				D28379B22B0FBB9B00A1903B /* Resource */,
+				D28379B02B0FBB8300A1903B /* Network */,
+				D28379AD2B0FBB7300A1903B /* Data */,
+				D28379AC2B0FBB5300A1903B /* Presentation */,
+				D28379AB2B0FBB3400A1903B /* Application */,
 				D206CAE52B0FB74A007ECC1B /* Info.plist */,
 			);
 			path = "SOPKATHON_33-iOS";
+			sourceTree = "<group>";
+		};
+		D28379AB2B0FBB3400A1903B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				D206CAD92B0FB748007ECC1B /* SceneDelegate.swift */,
+				D206CAD72B0FB748007ECC1B /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		D28379AC2B0FBB5300A1903B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D206CADB2B0FB748007ECC1B /* ViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D28379AD2B0FBB7300A1903B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				D28379AE2B0FBB7C00A1903B /* Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		D28379B02B0FBB8300A1903B /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D28379B12B0FBB8F00A1903B /* Foundation */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D28379B12B0FBB8F00A1903B /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		D28379B22B0FBB9B00A1903B /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				D206CAE22B0FB74A007ECC1B /* LaunchScreen.storyboard */,
+				D206CAE02B0FB74A007ECC1B /* Assets.xcassets */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		D28379B32B0FBBB200A1903B /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				D28379B52B0FBBBE00A1903B /* Extension */,
+				D28379B42B0FBBB700A1903B /* Constant */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		D28379B42B0FBBB700A1903B /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		D28379B52B0FBBBE00A1903B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -157,6 +232,7 @@
 				D206CADC2B0FB748007ECC1B /* ViewController.swift in Sources */,
 				D206CAD82B0FB748007ECC1B /* AppDelegate.swift in Sources */,
 				D206CADA2B0FB748007ECC1B /* SceneDelegate.swift in Sources */,
+				D28379AF2B0FBB7C00A1903B /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
