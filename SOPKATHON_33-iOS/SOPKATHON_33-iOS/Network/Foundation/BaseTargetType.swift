@@ -13,7 +13,7 @@ protocol BaseTargetType: TargetType{ }
 extension BaseTargetType{
     
     var baseURL: URL {
-        return URL(string: "")
+        return URL(string: "")!
 //        return URL(string: Config.baseURL)!
     }
     

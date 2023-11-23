@@ -40,7 +40,6 @@
 		D28379E22B0FC04C00A1903B /* VoidResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28379E12B0FC04C00A1903B /* VoidResult.swift */; };
 		D28379E42B0FC06C00A1903B /* SimpleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28379E32B0FC06C00A1903B /* SimpleResponse.swift */; };
 		D28379E62B0FC08200A1903B /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28379E52B0FC08200A1903B /* GenericResponse.swift */; };
-		D28379E82B0FC0AF00A1903B /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28379E72B0FC0AF00A1903B /* Size.swift */; };
 		D28379F22B0FC27C00A1903B /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28379E92B0FC27B00A1903B /* Pretendard-Medium.otf */; };
 		D28379F32B0FC27C00A1903B /* Pretendard-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28379EA2B0FC27B00A1903B /* Pretendard-ExtraLight.otf */; };
 		D28379F42B0FC27C00A1903B /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28379EB2B0FC27C00A1903B /* Pretendard-Bold.otf */; };
@@ -50,6 +49,7 @@
 		D28379F82B0FC27C00A1903B /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28379EF2B0FC27C00A1903B /* Pretendard-Black.otf */; };
 		D28379F92B0FC27C00A1903B /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28379F02B0FC27C00A1903B /* Pretendard-SemiBold.otf */; };
 		D28379FA2B0FC27C00A1903B /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28379F12B0FC27C00A1903B /* Pretendard-Regular.otf */; };
+		D28379FC2B0FC53500A1903B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28379FB2B0FC53500A1903B /* Device.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,7 +84,6 @@
 		D28379E12B0FC04C00A1903B /* VoidResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidResult.swift; sourceTree = "<group>"; };
 		D28379E32B0FC06C00A1903B /* SimpleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleResponse.swift; sourceTree = "<group>"; };
 		D28379E52B0FC08200A1903B /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
-		D28379E72B0FC0AF00A1903B /* Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		D28379E92B0FC27B00A1903B /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		D28379EA2B0FC27B00A1903B /* Pretendard-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraLight.otf"; sourceTree = "<group>"; };
 		D28379EB2B0FC27C00A1903B /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		D28379EF2B0FC27C00A1903B /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
 		D28379F02B0FC27C00A1903B /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		D28379F12B0FC27C00A1903B /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		D28379FB2B0FC53500A1903B /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +219,7 @@
 		D28379B42B0FBBB700A1903B /* Constant */ = {
 			isa = PBXGroup;
 			children = (
-				D28379E72B0FC0AF00A1903B /* Size.swift */,
+				D28379FB2B0FC53500A1903B /* Device.swift */,
 			);
 			path = Constant;
 			sourceTree = "<group>";
@@ -369,8 +369,8 @@
 				D28379C32B0FBC2900A1903B /* UILabel+.swift in Sources */,
 				D28379C52B0FBC3700A1903B /* UINavagationController+.swift in Sources */,
 				D28379BB2B0FBBF500A1903B /* UIButton+.swift in Sources */,
-				D28379E82B0FC0AF00A1903B /* Size.swift in Sources */,
 				D28379D92B0FBE5C00A1903B /* NetworkResult.swift in Sources */,
+				D28379FC2B0FC53500A1903B /* Device.swift in Sources */,
 				D28379D52B0FBDB300A1903B /* APIConstant.swift in Sources */,
 				D28379DD2B0FBE9C00A1903B /* BaseAPI.swift in Sources */,
 				D28379BF2B0FBC0F00A1903B /* UICollectionViewCell++.swift in Sources */,
