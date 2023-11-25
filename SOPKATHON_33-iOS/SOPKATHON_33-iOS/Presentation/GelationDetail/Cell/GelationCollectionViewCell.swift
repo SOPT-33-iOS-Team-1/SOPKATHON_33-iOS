@@ -10,6 +10,7 @@ import UIKit
 class GelationCollectionViewCell: UICollectionViewCell {
     
     private var backgroundImage = UIImageView()
+    private var iconImage = UIImageView()
     private var cardTitle = UILabel()
     private var cardIcon1 = UIImage()
     private var cardIcon2 = UIImage()
@@ -34,7 +35,14 @@ class GelationCollectionViewCell: UICollectionViewCell {
            fatalError("init(coder:) has not been implemented")
        }
     
-    func bindData(title: String, data: [String]) {
+    func bindData(
+        backgroundImage: UIImage,
+        icon: UIImage,
+        title: String,
+        data: [String]
+    ) {
+        self.backgroundImage.image = backgroundImage
+        self.iconImage.image = icon
         self.cardTitle.text = title
         self.list1.text = data[0]
         self.list2.text = data[1]
@@ -45,12 +53,18 @@ class GelationCollectionViewCell: UICollectionViewCell {
     
     private func setLayout() {
         self.addSubviews(backgroundImage)
-        backgroundImage.addSubviews(cardTitle, list1, list2, list3, list4)
+        backgroundImage.addSubviews(cardTitle, iconImage, list1, list2, list3, list4)
         
         backgroundImage.snp.makeConstraints {
             $0.leading.top.bottom.equalToSuperview()
             $0.height.equalTo(205)
             $0.width.equalTo(335)
+        }
+        
+        iconImage.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(72)
+            $0.leading.equalToSuperview().offset(25)
+            $0.size.equalTo(12)
         }
         
         cardTitle.snp.makeConstraints {

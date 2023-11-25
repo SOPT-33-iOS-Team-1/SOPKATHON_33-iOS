@@ -10,10 +10,15 @@ import UIKit
 import SnapKit
 import Then
 
+protocol ProgramCollectionViewCellDelegate: AnyObject {
+    func cellDidTap(id: Int)
+}
+
 final class ProgramCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Components
     
+    private var id: Int?
     private let backgroundImageView = UIImageView()
     private let titleLabel = UILabel()
     private let areaLabel = UILabel()
@@ -100,7 +105,12 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func dataBind() {
+    func dataBind(_ data: ProgramModel) {
+        id = data.programID
+        titleLabel.text = data.title
+        backgroundImageView.kfSetImage(url: data.imageURL)
+        areaLabel.text = data.region
+        updateLabel.text = data.registerAt
     }
 }
 

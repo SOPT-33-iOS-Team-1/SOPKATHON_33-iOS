@@ -100,11 +100,26 @@ extension GelationDetailView: UICollectionViewDataSource {
         if !(gelationData?.volunteers.isEmpty ?? true) {
             switch indexPath.item {
             case 0:
-                item.bindData(title: "봉사 내역", data: gelationData!.volunteers)
+                item.bindData(
+                    backgroundImage: Image.card!,
+                    icon: Image.star1!,
+                    title: "봉사 내역",
+                    data: gelationData!.volunteers
+                )
             case 1:
-                item.bindData(title: "이수 프로그램 내역",data: gelationData!.programs)
+                item.bindData(
+                    backgroundImage: Image.card2!,
+                    icon: Image.star2!,
+                    title: "이수 프로그램 내역",
+                    data: gelationData!.programs
+                )
             case 2:
-                item.bindData(title: "자격증 목록",data: gelationData!.certifications)
+                item.bindData(
+                    backgroundImage: Image.card3!,
+                    icon: Image.star3!,
+                    title: "자격증 목록",
+                    data: gelationData!.certifications
+                )
             default:
                 break
             }

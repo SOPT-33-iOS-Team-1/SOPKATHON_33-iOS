@@ -51,9 +51,13 @@ final class ProgramViewController: BaseViewController {
     
     @objc func voluteerButtonDidTap() {
         requestProgramAPI(type: "VOLUNTEERING")
+        rootView.programTopView.voluteerButton.setTitleColor(.white, for: .normal)
+        rootView.programTopView.employmentButton.setTitleColor(.gray500, for: .normal)
     }
     @objc func employmentButtonDidTap() {
         requestProgramAPI(type: "EMPLOYMENT")
+        rootView.programTopView.voluteerButton.setTitleColor(.gray500, for: .normal)
+        rootView.programTopView.employmentButton.setTitleColor(.white, for: .normal)
     }
     @objc func statusSupportButtonDidTap() {
         let supportViewController = SupportViewController()
@@ -67,6 +71,12 @@ final class ProgramViewController: BaseViewController {
         }
     }
     
+    private func pushProgramDetailVC(id: Int) {
+        let programDetailVC = DetailViewController()
+        programDetailVC.id = id
+        self.navigationController?.pushViewController(programDetailVC, animated: true)
+    }
+    
 }
 
 
@@ -77,6 +87,12 @@ extension ProgramViewController: UICollectionViewDelegateFlowLayout {
             height: 209
         )
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // 셀이 선택됐을 때 실행되는 함수
+        let selectedItemId = programData[indexPath.item].programID
+        pushProgramDetailVC(id: selectedItemId)
+        
+    }
 }
 
 extension ProgramViewController: UICollectionViewDataSource {
@@ -86,8 +102,9 @@ extension ProgramViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProgramCollectionViewCell.cellIdentifier, for: indexPath) as! ProgramCollectionViewCell
+        if !programData.isEmpty {
+            cell.dataBind(programData[indexPath.item])
+        }
         return cell
     }
-    
-    
 }

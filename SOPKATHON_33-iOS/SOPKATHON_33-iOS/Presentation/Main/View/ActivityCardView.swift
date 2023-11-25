@@ -33,9 +33,13 @@ final class ActivityCardView: UIView {
         self.setUI()
         self.setHierachy()
         self.setLayout()
+        progressView1.backgroundColor = .clear
         progressView1.ringColor = .blue1
+        progressView2.backgroundColor = .clear
         progressView2.ringColor = .blue2
+        progressView3.backgroundColor = .clear
         progressView3.ringColor = .blue3
+        
     }
     
     @available(*, unavailable)

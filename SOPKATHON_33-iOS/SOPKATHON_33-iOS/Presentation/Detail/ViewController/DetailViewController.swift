@@ -10,9 +10,15 @@ import UIKit
 import SnapKit
 import Then
 
-final class DetailViewController: UIViewController {
+final class DetailViewController: BaseViewController {
     
     // MARK: - Properties
+    private var detailData: DetailModel? {
+        didSet {
+            self.dataBind()
+        }
+    }
+    var id: Int?
     
     private lazy var backButton = UIButton()
     private let backgroundImageView = UIImageView()
@@ -40,6 +46,15 @@ final class DetailViewController: UIViewController {
         view.backgroundColor = .gray700
         setNavigation()
         setUI()
+        requestDetailAPI()
+    }
+    
+    func requestDetailAPI() {
+        guard let id else { return }
+        MoyaAPI.shared.getProgramDetailData(id: id) { [weak self] result in
+            guard let result = self?.validateResult(result) as? DetailModel else { return }
+            self?.detailData = result
+        }
     }
     
 }
@@ -60,6 +75,7 @@ extension DetailViewController {
             $0.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
             $0.tintColor = .white
         }
+        
         
         backgroundImageView.do {
             $0.image = Image.dummy1
@@ -159,7 +175,7 @@ extension DetailViewController {
     }
     
     private func setLayout() {
-        view.addSubviews(backButton, backgroundImageView, scrollView, applyView)
+        view.addSubviews(backgroundImageView, scrollView, applyView)
         
         backgroundImageView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
@@ -268,9 +284,37 @@ extension DetailViewController {
         self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
     
-//    func bindData(data: ProgramData) {
-//        self.titleLabel.text = data.title
-//        self.bodyLabel.text = data.body
-//    }
+    func dataBind() {
+        guard let data = detailData else { return }
+        self.agencyValueLabel.text = data.organizationName
+        self.dateValueLabel.text = data.registerAt
+        if let salary = data.salary {
+            self.salaryValueLabel.text = "\(salary)원"
+        }
+        if let time = data.hour {
+            self.timeValueLabel.text = "\(time)시간"
+        }
+        
+        self.backgroundImageView.kfSetImage(url: data.imageURL)
+        self.bodyLabel.text = data.content
+        
+        if data.programType == "VOLUNTEERING" {
+            [salaryKeyLabel, salaryValueLabel].forEach {
+                $0.isHidden = true
+            }
+            
+            [timeKeyLabel, timeValueLabel].forEach {
+                $0.isHidden = false
+            }
+        } else {
+            [salaryKeyLabel, salaryValueLabel].forEach {
+                $0.isHidden = false
+            }
+            
+            [timeKeyLabel, timeValueLabel].forEach {
+                $0.isHidden = true
+            }
+        }
+    }
     
 }
