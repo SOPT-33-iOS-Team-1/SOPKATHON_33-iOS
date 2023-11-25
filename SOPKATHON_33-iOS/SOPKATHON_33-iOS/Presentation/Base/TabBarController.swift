@@ -20,7 +20,7 @@ final class TabBarController: UITabBarController {
     }
     
     private func setUI() {
-        tabBar.backgroundColor = .brown
+        tabBar.backgroundColor = UIColor(red: 0.106, green: 0.114, blue: 0.122, alpha: 1)
     }
     
     private func setTabBar() {
