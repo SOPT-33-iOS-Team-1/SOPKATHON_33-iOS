@@ -50,7 +50,8 @@ final class ProgramViewController: UIViewController {
         print(#function)
     }
     @objc func statusSupportButtonDidTap() {
-        print(#function)
+        let supportViewController = SupportViewController()
+        self.navigationController?.pushViewController(supportViewController, animated: true)
     }
     
 }
