@@ -13,8 +13,11 @@ final class ActivityCardView: UIView {
     //MARK: - set Properties
     
     let progressView1 = ProgressView(frame: .init(origin: .zero, size: .init(width: 187,height: 187)))
+    
     let progressView2 = ProgressView(frame: .init(origin: .zero, size: .init(width: 145,height: 145)))
+    
     let progressView3 = ProgressView(frame: .init(origin: .zero, size: .init(width: 105,height: 105)))
+    
     let activityStackView = ActivityStackView()
     private let divisionLine = UIView()
     private let showDetailButton = UIButton()
@@ -27,6 +30,9 @@ final class ActivityCardView: UIView {
         self.setUI()
         self.setHierachy()
         self.setLayout()
+        progressView1.ringColor = .blue1
+        progressView2.ringColor = .blue2
+        progressView3.ringColor = .blue3
     }
     
     @available(*, unavailable)

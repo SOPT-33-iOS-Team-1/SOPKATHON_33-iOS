@@ -8,16 +8,19 @@
 import UIKit
 
 class ProgressView: UIView {
+    var ringColor: UIColor?
     private var circleLayer = CAShapeLayer()
     private var progressLayer = CAShapeLayer()
     private var startPoint = CGFloat(-0.5 * Double.pi)
     private var endPoint = CGFloat(1.5 * Double.pi)
+
     
     override func draw(_ rect: CGRect) {
         createCircularPath()
     }
     
     func createCircularPath() {
+        guard let ringColor else { return }
         self.backgroundColor = .white
         let circularPath = UIBezierPath(arcCenter: .init(
             x: self.frame.width / 2.0,
@@ -43,7 +46,7 @@ class ProgressView: UIView {
         progressLayer.strokeStart = 0.0
 //        progressLayer.strokeEnd = 0.5
         
-        progressLayer.strokeColor = UIColor.red.cgColor
+        progressLayer.strokeColor = ringColor.cgColor
         layer.addSublayer(progressLayer)
     }
     
