@@ -60,7 +60,8 @@ final class ProgramViewController: BaseViewController {
         rootView.programTopView.employmentButton.setTitleColor(.white, for: .normal)
     }
     @objc func statusSupportButtonDidTap() {
-        print(#function)
+        let supportViewController = SupportViewController()
+        self.navigationController?.pushViewController(supportViewController, animated: true)
     }
     
     private func requestProgramAPI(type: String) {

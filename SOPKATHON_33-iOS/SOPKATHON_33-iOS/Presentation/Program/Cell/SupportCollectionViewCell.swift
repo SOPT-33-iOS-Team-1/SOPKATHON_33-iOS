@@ -1,8 +1,8 @@
 //
-//  ProgramCollectionViewCell.swift
+//  SupportCollectionViewCell.swift
 //  SOPKATHON_33-iOS
 //
-//  Created by 류희재 on 2023/11/26.
+//  Created by 티모시 킴 on 11/26/23.
 //
 
 import UIKit
@@ -10,15 +10,10 @@ import UIKit
 import SnapKit
 import Then
 
-protocol ProgramCollectionViewCellDelegate: AnyObject {
-    func cellDidTap(id: Int)
-}
-
-final class ProgramCollectionViewCell: UICollectionViewCell {
+final class SupportCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Components
     
-    private var id: Int?
     private let backgroundImageView = UIImageView()
     private let titleLabel = UILabel()
     private let areaLabel = UILabel()
@@ -105,12 +100,8 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func dataBind(_ data: ProgramModel) {
-        id = data.programID
-        titleLabel.text = data.title
-        backgroundImageView.kfSetImage(url: data.imageURL)
-        areaLabel.text = data.region
-        updateLabel.text = data.registerAt
+    func dataBind() {
     }
 }
+
 

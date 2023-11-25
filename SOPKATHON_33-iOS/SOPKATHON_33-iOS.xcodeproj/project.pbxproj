@@ -10,6 +10,11 @@
 		0003BFBC2B1247EF00C29757 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0003BFBB2B1247EF00C29757 /* DetailViewController.swift */; };
 		0083D6FC2B127C030084766E /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083D6FB2B127C030084766E /* UIColor+.swift */; };
 		0083D6FE2B1280C30084766E /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083D6FD2B1280C30084766E /* Image.swift */; };
+		0083D7002B12A0150084766E /* SupportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083D6FF2B12A0150084766E /* SupportViewController.swift */; };
+		0083D7022B12A2280084766E /* SupportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083D7012B12A2280084766E /* SupportView.swift */; };
+		0083D7042B12A3450084766E /* SupportTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083D7032B12A3450084766E /* SupportTopView.swift */; };
+		0083D7062B12A38B0084766E /* SupportCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083D7052B12A38B0084766E /* SupportCollectionView.swift */; };
+		0083D7082B12A3BD0084766E /* SupportCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0083D7072B12A3BD0084766E /* SupportCollectionViewCell.swift */; };
 		00B6F46D2B1224F3008F7396 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 00B6F46C2B1224F3008F7396 /* Tabman */; };
 		A13161452B12749800883CB2 /* UserInfoChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A13161442B12749800883CB2 /* UserInfoChipView.swift */; };
 		A19A1F522B12451B0077ACEC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A1F512B12451B0077ACEC /* MainViewController.swift */; };
@@ -84,6 +89,11 @@
 		0003BFBB2B1247EF00C29757 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0083D6FB2B127C030084766E /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		0083D6FD2B1280C30084766E /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		0083D6FF2B12A0150084766E /* SupportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportViewController.swift; sourceTree = "<group>"; };
+		0083D7012B12A2280084766E /* SupportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportView.swift; sourceTree = "<group>"; };
+		0083D7032B12A3450084766E /* SupportTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportTopView.swift; sourceTree = "<group>"; };
+		0083D7052B12A38B0084766E /* SupportCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCollectionView.swift; sourceTree = "<group>"; };
+		0083D7072B12A3BD0084766E /* SupportCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportCollectionViewCell.swift; sourceTree = "<group>"; };
 		A13161442B12749800883CB2 /* UserInfoChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoChipView.swift; sourceTree = "<group>"; };
 		A19A1F512B12451B0077ACEC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A19A1F542B1245330077ACEC /* IdCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdCardView.swift; sourceTree = "<group>"; };
@@ -265,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				D26AFFD72B1254AA007B90DF /* AssitantView */,
+				0083D7012B12A2280084766E /* SupportView.swift */,
 				D26AFFD52B125479007B90DF /* ProgramView.swift */,
 			);
 			path = View;
@@ -274,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				D26AFFD32B12546F007B90DF /* ProgramViewController.swift */,
+				0083D6FF2B12A0150084766E /* SupportViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -282,6 +294,7 @@
 			isa = PBXGroup;
 			children = (
 				D26AFFDC2B125AF8007B90DF /* ProgramCollectionViewCell.swift */,
+				0083D7072B12A3BD0084766E /* SupportCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -290,7 +303,9 @@
 			isa = PBXGroup;
 			children = (
 				D26AFFD82B1254BC007B90DF /* ProgramTopView.swift */,
+				0083D7032B12A3450084766E /* SupportTopView.swift */,
 				D26AFFDA2B125825007B90DF /* ProgramCollectionView.swift */,
+				0083D7052B12A38B0084766E /* SupportCollectionView.swift */,
 			);
 			path = AssitantView;
 			sourceTree = "<group>";
@@ -591,10 +606,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D28379C12B0FBC1D00A1903B /* UIImageView+.swift in Sources */,
+				0083D7002B12A0150084766E /* SupportViewController.swift in Sources */,
 				A19A1F552B1245330077ACEC /* IdCardView.swift in Sources */,
 				D28379B92B0FBBEA00A1903B /* UIApplication+.swift in Sources */,
 				D28379E22B0FC04C00A1903B /* VoidResult.swift in Sources */,
 				D28379D72B0FBDDC00A1903B /* MoyaLoggerPlugin.swift in Sources */,
+				0083D7042B12A3450084766E /* SupportTopView.swift in Sources */,
+				0083D7022B12A2280084766E /* SupportView.swift in Sources */,
 				A19A1F5B2B1255CF0077ACEC /* ActivityStackView.swift in Sources */,
 				D28379E42B0FC06C00A1903B /* SimpleResponse.swift in Sources */,
 				D26AFFDD2B125AF8007B90DF /* ProgramCollectionViewCell.swift in Sources */,
@@ -604,6 +622,7 @@
 				D28379BB2B0FBBF500A1903B /* UIButton+.swift in Sources */,
 				D26AFFEC2B127B0F007B90DF /* BaseViewController.swift in Sources */,
 				D26AFFEA2B12767B007B90DF /* MoyaAPI.swift in Sources */,
+				0083D7082B12A3BD0084766E /* SupportCollectionViewCell.swift in Sources */,
 				D28379D92B0FBE5C00A1903B /* NetworkResult.swift in Sources */,
 				A19A1F522B12451B0077ACEC /* MainViewController.swift in Sources */,
 				D26AFFF22B129A8F007B90DF /* ProgramModel.swift in Sources */,
@@ -632,6 +651,7 @@
 				D26AFFD62B125479007B90DF /* ProgramView.swift in Sources */,
 				D206CAD82B0FB748007ECC1B /* AppDelegate.swift in Sources */,
 				D26AFFD92B1254BC007B90DF /* ProgramTopView.swift in Sources */,
+				0083D7062B12A38B0084766E /* SupportCollectionView.swift in Sources */,
 				D28379E62B0FC08200A1903B /* GenericResponse.swift in Sources */,
 				D28379DB2B0FBE7500A1903B /* BaseTargetType.swift in Sources */,
 				D28379DF2B0FBFFC00A1903B /* Adjusted+.swift in Sources */,
