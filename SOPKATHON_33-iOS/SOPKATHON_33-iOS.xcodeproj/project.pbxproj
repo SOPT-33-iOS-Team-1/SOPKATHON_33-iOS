@@ -55,6 +55,7 @@
 		E5CD4BF02B124AD900CF9D17 /* GelationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BEF2B124AD900CF9D17 /* GelationDetailView.swift */; };
 		E5CD4BF22B124BD600CF9D17 /* GelationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BF12B124BD600CF9D17 /* GelationCollectionViewCell.swift */; };
 		E5CD4BF52B1250F800CF9D17 /* GelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BF42B1250F800CF9D17 /* GelationData.swift */; };
+		E5CD4BF72B12637800CF9D17 /* CustomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BF62B12637800CF9D17 /* CustomNavigationBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		E5CD4BEF2B124AD900CF9D17 /* GelationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelationDetailView.swift; sourceTree = "<group>"; };
 		E5CD4BF12B124BD600CF9D17 /* GelationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelationCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5CD4BF42B1250F800CF9D17 /* GelationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelationData.swift; sourceTree = "<group>"; };
+		E5CD4BF62B12637800CF9D17 /* CustomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				E5CD4BEF2B124AD900CF9D17 /* GelationDetailView.swift */,
+				E5CD4BF62B12637800CF9D17 /* CustomNavigationBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				D28379D92B0FBE5C00A1903B /* NetworkResult.swift in Sources */,
 				D28379FC2B0FC53500A1903B /* Device.swift in Sources */,
 				E5CD4BF22B124BD600CF9D17 /* GelationCollectionViewCell.swift in Sources */,
+				E5CD4BF72B12637800CF9D17 /* CustomNavigationBarView.swift in Sources */,
 				D28379D52B0FBDB300A1903B /* APIConstant.swift in Sources */,
 				D28379DD2B0FBE9C00A1903B /* BaseAPI.swift in Sources */,
 				D28379BF2B0FBC0F00A1903B /* UICollectionViewCell++.swift in Sources */,

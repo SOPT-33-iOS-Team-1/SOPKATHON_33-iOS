@@ -16,6 +16,8 @@ class GelationCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "GelationCollectionViewCell"
     
+    
+    
     private var itemRow: Int?
        
        override init(frame: CGRect) {
@@ -34,6 +36,7 @@ class GelationCollectionViewCell: UICollectionViewCell {
         self.list2.text = data.list2
     }
     
+    
     private func setLayout() {
         self.addSubviews(backgroundImage)
         backgroundImage.addSubviews(cardTitle, list1, list2)
@@ -47,6 +50,7 @@ class GelationCollectionViewCell: UICollectionViewCell {
         cardTitle.snp.makeConstraints {
             $0.leading.equalTo(backgroundImage.snp.leading).inset(23.adjusted)
             $0.top.equalTo(backgroundImage.snp.top).inset(85.adjusted)
+            $0.width.equalTo(50)
         }
         
         list1.snp.makeConstraints {
@@ -67,7 +71,7 @@ class GelationCollectionViewCell: UICollectionViewCell {
         
         cardTitle.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
-            $0.numberOfLines = 3
+            $0.numberOfLines = 0
         }
         
         list1.do {
@@ -80,5 +84,3 @@ class GelationCollectionViewCell: UICollectionViewCell {
         
     }
 }
-
-

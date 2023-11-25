@@ -12,6 +12,8 @@ import SnapKit
 
 final class  GelationDetailView: UIViewController {
     
+    let customGelationNavigationView = CustomGelationNavigationView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setStyle()
@@ -21,13 +23,22 @@ final class  GelationDetailView: UIViewController {
     }
     
     private func setStyle() {
-        self.view.addSubviews(collectionView)
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     private func setLayout() {
+        self.view.addSubviews(collectionView, customGelationNavigationView)
+        
+        customGelationNavigationView.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide)
+            $0.horizontalEdges.equalToSuperview()
+        }
+        
         collectionView.snp.makeConstraints{
-            $0.top.bottom.leading.trailing.equalToSuperview()
+            $0.bottom.leading.trailing.equalToSuperview()
+            $0.top.equalTo(customGelationNavigationView.snp.bottom)
                }
+        
     }
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
@@ -61,7 +72,3 @@ extension GelationDetailView: UICollectionViewDataSource {
         return item
     }
 }
-
-
-
-
