@@ -85,8 +85,9 @@ extension ProgramViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProgramCollectionViewCell.cellIdentifier, for: indexPath) as! ProgramCollectionViewCell
+        if !programData.isEmpty {
+            cell.dataBind(programData[indexPath.item])
+        }
         return cell
     }
-    
-    
 }

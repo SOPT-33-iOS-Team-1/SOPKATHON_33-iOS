@@ -100,7 +100,11 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func dataBind() {
+    func dataBind(_ data: ProgramModel) {
+        titleLabel.text = data.title
+        backgroundImageView.kfSetImage(url: data.imageURL)
+        areaLabel.text = data.region
+        updateLabel.text = data.registerAt
     }
 }
 
