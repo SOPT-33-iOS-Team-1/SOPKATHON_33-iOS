@@ -56,7 +56,7 @@ final class ProgramView: UIView {
         
         programCollectionView.snp.makeConstraints {
             $0.top.equalTo(programTopView.snp.bottom).offset(26)
-            $0.width.equalToSuperview()
+            $0.leading.trailing.equalToSuperview().inset(20)
             $0.bottom.equalToSuperview()
         }
     }

@@ -37,7 +37,8 @@ final class ProgramViewController: UIViewController {
         rootView.programTopView.statusSupportButton.addTarget(self, action: #selector(statusSupportButtonDidTap), for: .touchUpInside)
     }
     private func delegate() {
-        
+        rootView.programCollectionView.delegate = self
+        rootView.programCollectionView.dataSource = self
     }
     
     //MARK: - Action Method
@@ -51,5 +52,28 @@ final class ProgramViewController: UIViewController {
     @objc func statusSupportButtonDidTap() {
         print(#function)
     }
+    
+}
+
+
+extension ProgramViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(
+            width: CGFloat((Device.width - 57) / 2),
+            height: 209
+        )
+    }
+}
+
+extension ProgramViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProgramCollectionViewCell.cellIdentifier, for: indexPath) as! ProgramCollectionViewCell
+        return cell
+    }
+    
     
 }

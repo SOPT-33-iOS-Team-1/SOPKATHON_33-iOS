@@ -35,6 +35,11 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
     // MARK: - Custom Method
     
     private func style() {
+        contentView.do {
+            $0.backgroundColor = .yellow
+            $0.makeCornerRound(ratio: 10)
+        }
+        
         titleLabel.do {
             $0.text = "프로그램 명을 입력해주세요."
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14)
@@ -67,17 +72,17 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
     
     private func layout() {
         titleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(135)
-            $0.leading.trailing.equalToSuperview().inset(12)
+            $0.top.equalToSuperview().offset(135.adjusted)
+            $0.leading.trailing.equalToSuperview().inset(12.adjusted)
         }
         
         areaLabel.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(10)
+            $0.top.equalTo(titleLabel.snp.bottom).offset(10.adjusted)
             $0.leading.equalTo(titleLabel)
         }
         
         updateLabel.snp.makeConstraints {
-            $0.leading.equalTo(areaLabel.snp.trailing).offset(10)
+            $0.leading.equalTo(areaLabel.snp.trailing).offset(10.adjusted)
             $0.top.equalTo(areaLabel)
         }
     }

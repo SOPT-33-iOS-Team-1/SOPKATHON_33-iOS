@@ -30,10 +30,10 @@ final class ProgramCollectionView: UICollectionView {
     // MARK: - Custom Method
     
     private func register() {
-//        self.register(
-//            MainMoreClubCollectionViewCell.self,
-//            forCellWithReuseIdentifier: MainMoreClubCollectionViewCell.cellIdentifier
-//        )
+        self.register(
+            ProgramCollectionViewCell.self,
+            forCellWithReuseIdentifier: ProgramCollectionViewCell.cellIdentifier
+        )
     }
     
     private func style() {
