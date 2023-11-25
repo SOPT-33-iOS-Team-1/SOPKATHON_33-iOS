@@ -19,8 +19,16 @@ final class DetailViewController: UIViewController {
     private let scrollView = UIScrollView()
     private var contentView = UIView()
     let titleLabel = UILabel()
-    let bodyLabel = UILabel()
     private let lineView = UIView()
+    let bodyLabel = UILabel()
+    let agencyKeyLabel = UILabel()
+    let agencyValueLabel = UILabel()
+    let dateKeyLabel = UILabel()
+    let dateValueLabel = UILabel()
+    let timeKeyLabel = UILabel()
+    let timeValueLabel = UILabel()
+    let salaryKeyLabel = UILabel()
+    let salaryValueLabel = UILabel()
     private let applyView = UIView()
     private lazy var applyButton = UIButton()
     
@@ -29,7 +37,7 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .white
+        view.backgroundColor = .gray600
         setNavigation()
         setUI()
     }
@@ -61,24 +69,80 @@ extension DetailViewController {
         
         titleLabel.do {
             $0.text = "솝트와 함께하는 플로깅 봉사솝트와 함께하는 플로깅 봉사"
-            $0.font = UIFont.boldSystemFont(ofSize: 20)
-            $0.textColor = .black
-            $0.numberOfLines = 0
-        }
-        
-        bodyLabel.do {
-            $0.text = "지역 플로깅을 통해 지역 사회에 기여하세요."
-            $0.font = UIFont.systemFont(ofSize: 12)
-            $0.textColor = .black
+            $0.font = UIFont(name: "Pretendard-SemiBold", size: 20)
+            $0.textColor = .white
             $0.numberOfLines = 0
         }
         
         lineView.do {
-            $0.backgroundColor = .black
+            $0.backgroundColor = .gray500
+        }
+        
+        bodyLabel.do {
+            $0.text = "지역 플로깅을 통해 지역 사회에 기여하세요."
+            $0.font = UIFont(name: "Pretendard-Regular", size: 14)
+            $0.textColor = .white
+            $0.numberOfLines = 0
+        }
+        
+        agencyKeyLabel.do {
+            $0.text = "기관명"
+            $0.font = UIFont(name: "Pretendard-Regular", size: 14)
+            $0.textColor = .gray400
+            $0.numberOfLines = 0
+        }
+        
+        agencyValueLabel.do {
+            $0.text = "노인종합지원센터"
+            $0.font = UIFont(name: "Pretendard-Regular", size: 14)
+            $0.textColor = .gray400
+            $0.numberOfLines = 0
+        }
+        
+        dateKeyLabel.do {
+            $0.text = "업로드 날짜"
+            $0.font = UIFont(name: "Pretendard-Regular", size: 14)
+            $0.textColor = .gray400
+            $0.numberOfLines = 0
+        }
+        
+        dateValueLabel.do {
+            $0.text = "11월 08일"
+            $0.font = UIFont(name: "Pretendard-Regular", size: 14)
+            $0.textColor = .gray400
+            $0.numberOfLines = 0
+        }
+        
+        timeKeyLabel.do {
+            $0.text = "봉사 시간"
+            $0.font = UIFont(name: "Pretendard-Regular", size: 14)
+            $0.textColor = .gray400
+            $0.numberOfLines = 0
+        }
+        
+        timeValueLabel.do {
+            $0.text = "8시간"
+            $0.font = UIFont(name: "Pretendard-Regular", size: 14)
+            $0.textColor = .gray400
+            $0.numberOfLines = 0
+        }
+        
+        salaryKeyLabel.do {
+            $0.text = "월급"
+            $0.font = UIFont(name: "Pretendard-Regular", size: 14)
+            $0.textColor = .gray400
+            $0.numberOfLines = 0
+        }
+        
+        salaryValueLabel.do {
+            $0.text = "2,690,000원"
+            $0.font = UIFont(name: "Pretendard-Regular", size: 14)
+            $0.textColor = .gray400
+            $0.numberOfLines = 0
         }
         
         applyView.do {
-            $0.backgroundColor = .white
+            $0.backgroundColor = .gray600
         }
         
         applyButton.do {
@@ -118,23 +182,67 @@ extension DetailViewController {
             $0.width.equalToSuperview()
         }
         
-        contentView.addSubviews(titleLabel, bodyLabel, lineView)
+        contentView.addSubviews(titleLabel, lineView, bodyLabel, agencyKeyLabel, agencyValueLabel, dateKeyLabel, dateValueLabel, timeKeyLabel, timeValueLabel, salaryKeyLabel, salaryValueLabel)
         
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(20)
         }
         
+        lineView.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(15)
+            $0.leading.trailing.equalTo(titleLabel)
+            $0.height.equalTo(0.5)
+        }
+        
         bodyLabel.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(12)
+            $0.top.equalTo(lineView.snp.bottom).offset(15)
             $0.leading.trailing.equalTo(titleLabel)
         }
         
-        lineView.snp.makeConstraints {
+        agencyKeyLabel.snp.makeConstraints {
             $0.top.equalTo(bodyLabel.snp.bottom).offset(15)
             $0.leading.trailing.equalTo(titleLabel)
-            $0.height.equalTo(0.5)
+        }
+        
+        agencyValueLabel.snp.makeConstraints {
+            $0.top.equalTo(agencyKeyLabel)
+            $0.leading.equalToSuperview().inset(115)
+            $0.trailing.equalToSuperview().inset(20)
+        }
+        
+        dateKeyLabel.snp.makeConstraints {
+            $0.top.equalTo(agencyKeyLabel.snp.bottom).offset(10)
+            $0.leading.trailing.equalTo(titleLabel)
+        }
+        
+        dateValueLabel.snp.makeConstraints {
+            $0.top.equalTo(dateKeyLabel)
+            $0.leading.equalToSuperview().inset(115)
+            $0.trailing.equalToSuperview().inset(20)
+        }
+        
+        timeKeyLabel.snp.makeConstraints {
+            $0.top.equalTo(dateKeyLabel.snp.bottom).offset(10)
+            $0.leading.trailing.equalTo(titleLabel)
+        }
+        
+        timeValueLabel.snp.makeConstraints {
+            $0.top.equalTo(timeKeyLabel)
+            $0.leading.equalToSuperview().inset(115)
+            $0.trailing.equalToSuperview().inset(20)
+        }
+        
+        salaryKeyLabel.snp.makeConstraints {
+            $0.top.equalTo(timeKeyLabel.snp.bottom).offset(10)
+            $0.leading.trailing.equalTo(titleLabel)
             $0.bottom.equalToSuperview()
+        }
+        
+        salaryValueLabel.snp.makeConstraints {
+            $0.top.equalTo(salaryKeyLabel)
+            $0.leading.equalToSuperview().inset(115)
+            $0.trailing.equalToSuperview().inset(20)
         }
         
         applyView.snp.makeConstraints {
