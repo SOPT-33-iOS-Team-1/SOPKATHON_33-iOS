@@ -37,7 +37,7 @@ final class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .gray600
+        view.backgroundColor = .gray700
         setNavigation()
         setUI()
     }
@@ -58,13 +58,17 @@ extension DetailViewController {
     private func setStyle() {
         backButton.do {
             $0.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-            $0.tintColor = .black
+            $0.tintColor = .white
+        }
+        
+        backgroundImageView.do {
+            $0.image = Image.dummy1
         }
         
         scrollView.do {
             $0.showsVerticalScrollIndicator = false
             $0.alwaysBounceVertical = true
-            $0.contentInset = .init(top: 400, left: 0, bottom: 0, right: 0)
+            $0.contentInset = .init(top: 225, left: 0, bottom: 0, right: 0)
         }
         
         titleLabel.do {
@@ -142,7 +146,7 @@ extension DetailViewController {
         }
         
         applyView.do {
-            $0.backgroundColor = .gray600
+            $0.backgroundColor = .gray700
         }
         
         applyButton.do {
@@ -159,7 +163,7 @@ extension DetailViewController {
         
         backgroundImageView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
-            $0.bottom.equalTo(applyView.snp.top)
+            $0.height.equalTo(243)
         }
         
         backgroundImageView.addSubview(backButton)
