@@ -15,6 +15,7 @@ enum MoyaService {
     case getGelationData
     case getProgramData(type: String)
     case getProgramDetailData(id: Int)
+    case getRegisterData
 }
 
 extension MoyaService: BaseTargetType {
@@ -28,6 +29,8 @@ extension MoyaService: BaseTargetType {
             return "/api/v1/program"
         case .getProgramDetailData:
             return "/api/v1/program/detail"
+        case .getRegisterData:
+            return "/api/v1/program/register"
         }
     }
     
@@ -40,6 +43,8 @@ extension MoyaService: BaseTargetType {
         case .getProgramData:
             return .get
         case .getProgramDetailData:
+            return .get
+        case .getRegisterData:
             return .get
         }
     }
@@ -55,6 +60,8 @@ extension MoyaService: BaseTargetType {
             return .requestParameters(parameters: ["program_type": type], encoding: URLEncoding.default)
         case .getProgramDetailData(let id):
             return .requestParameters(parameters: ["programId": id], encoding: URLEncoding.default)
+        case .getRegisterData:
+            return .requestPlain
         }
     }
 }

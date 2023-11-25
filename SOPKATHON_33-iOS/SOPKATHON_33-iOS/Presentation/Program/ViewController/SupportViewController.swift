@@ -10,10 +10,15 @@ import UIKit
 import SnapKit
 import Then
 
-final class SupportViewController: UIViewController {
+final class SupportViewController: BaseViewController {
     
     //MARK: - UI Components
     
+    var registerData: [RegisterModel] = [] {
+        didSet {
+            rootView.supportCollectionView.reloadData()
+        }
+    }
     private let rootView = SupportView()
     
     //MARK: - Life Cycle
@@ -27,6 +32,14 @@ final class SupportViewController: UIViewController {
         
         target()
         delegate()
+        requestRegisterAPI()
+    }
+    
+    private func requestRegisterAPI() {
+        MoyaAPI.shared.getProgramRegisterData() { [weak self] result in
+            guard let result = self?.validateResult(result) as? [RegisterModel] else { return }
+            self?.registerData = result
+        }
     }
     
     private func target() {
@@ -57,11 +70,14 @@ extension SupportViewController: UICollectionViewDelegateFlowLayout {
 
 extension SupportViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return registerData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SupportCollectionViewCell.cellIdentifier, for: indexPath) as! SupportCollectionViewCell
+        if !registerData.isEmpty {
+            cell.dataBind(registerData[indexPath.item])
+        }
         return cell
     }
     
