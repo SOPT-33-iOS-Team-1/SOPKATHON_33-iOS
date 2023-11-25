@@ -20,6 +20,7 @@ final class IdCardView: UIView {
     private let userCrimeHistory = UILabel()
     private let userCrimeYearAgo = UILabel()
     private let userImageView = UIImageView()
+    private let editProfileButton = UIButton()
     
     //MARK: - Life Cycle
     
@@ -78,6 +79,10 @@ final class IdCardView: UIView {
             
             $0.image = UIImage(named: "sample")
         }
+        
+        editProfileButton.do {
+            $0.setImage(UIImage(named: "editProfile"), for: .normal)
+        }
     }
     
     //MARK: - set Hierachy
@@ -88,7 +93,9 @@ final class IdCardView: UIView {
                          userGender,
                          userCrimeHistory,
                          userCrimeYearAgo,
-                         userImageView)
+                         userImageView,
+                         editProfileButton)
+        
     }
     
     //MARK: - set Layout
@@ -130,6 +137,11 @@ final class IdCardView: UIView {
             $0.trailing.equalToSuperview().inset(25.adjusted)
             $0.width.equalTo(65.adjusted)
             $0.height.equalTo(65.adjusted)
+        }
+        
+        editProfileButton.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(69.adjusted)
+            $0.leading.equalToSuperview().inset(289.adjusted)
         }
     }
 }

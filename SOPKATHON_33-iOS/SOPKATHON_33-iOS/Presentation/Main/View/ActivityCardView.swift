@@ -84,6 +84,7 @@ final class ActivityCardView: UIView {
         divisionLine.snp.makeConstraints {
             $0.top.equalToSuperview().inset(370.adjusted)
             $0.width.equalToSuperview()
+            $0.leading.equalToSuperview()
             $0.height.equalTo(1.adjusted)
         }
         
