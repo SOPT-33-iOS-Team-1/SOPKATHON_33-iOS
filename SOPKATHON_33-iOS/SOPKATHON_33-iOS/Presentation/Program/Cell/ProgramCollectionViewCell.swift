@@ -42,7 +42,7 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
         }
         
         backgroundImageView.do {
-            $0.contentMode = .scaleAspectFit
+            $0.contentMode = .scaleAspectFill
             $0.image = Image.dummy1
         }
         
