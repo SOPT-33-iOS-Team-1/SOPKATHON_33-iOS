@@ -12,6 +12,8 @@ import UIKit
 
 enum MoyaService {
     case getMainData
+    case getGelationData
+    case getProgramData(type: String)
 }
 
 extension MoyaService: BaseTargetType {
@@ -19,12 +21,20 @@ extension MoyaService: BaseTargetType {
         switch self {
         case .getMainData:
             return "/api/v1/user/info/\(1)"
+        case .getGelationData:
+            return "/api/v1/user/info/detail/\(1)"
+        case .getProgramData:
+            return "/api/v1/program"
         }
     }
     
     var method: Moya.Method {
         switch self {
         case .getMainData:
+            return .get
+        case .getGelationData:
+            return .get
+        case .getProgramData:
             return .get
         }
     }
@@ -34,6 +44,10 @@ extension MoyaService: BaseTargetType {
         switch self {
         case .getMainData:
             return .requestPlain
+        case .getGelationData:
+            return .requestPlain
+        case .getProgramData(let type):
+            return .requestParameters(parameters: ["program_type": type], encoding: URLEncoding.default)
         }
     }
 }

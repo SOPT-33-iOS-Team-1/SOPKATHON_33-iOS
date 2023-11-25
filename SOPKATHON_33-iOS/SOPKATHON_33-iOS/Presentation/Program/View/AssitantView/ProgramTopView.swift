@@ -40,19 +40,19 @@ final class ProgramTopView: UIView {
         voluteerButton.do {
             $0.setTitle("봉사", for: .normal)
             $0.titleLabel?.font = UIFont(name: "Pretendard-SemiBold", size: 20)
-            $0.setTitleColor(.black, for: .normal)
+            $0.setTitleColor(.white, for: .normal)
         }
         
         employmentButton.do {
             $0.setTitle("취업", for: .normal)
             $0.titleLabel?.font = UIFont(name: "Pretendard-SemiBold", size: 20)
-            $0.setTitleColor(.black, for: .normal)
+            $0.setTitleColor(.gray500, for: .normal)
         }
         
         statusSupportButton.do {
             $0.setTitle("지원현황", for: .normal)
             $0.titleLabel?.font = UIFont(name: "Pretendard-SemiBold", size: 14)
-            $0.setTitleColor(.black, for: .normal)
+            $0.setTitleColor(.gray300, for: .normal)
         }
     }
     

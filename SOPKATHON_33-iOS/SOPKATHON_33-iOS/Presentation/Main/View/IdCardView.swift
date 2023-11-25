@@ -145,4 +145,13 @@ final class IdCardView: UIView {
             $0.leading.equalTo(genderChipView.snp.trailing).offset(178.adjusted)
         }
     }
+    
+    func dataBind(_ data: MainModel?) {
+        guard let data else { return }
+        userName.text = data.name
+        ageChipView.infoLabel.text = "\(data.age)세"
+        genderChipView.infoLabel.text = data.gender
+        userCrimeHistory.text = data.criminalHistory
+        userCrimeYearAgo.text = data.criminalHistoryDate
+    }
 }

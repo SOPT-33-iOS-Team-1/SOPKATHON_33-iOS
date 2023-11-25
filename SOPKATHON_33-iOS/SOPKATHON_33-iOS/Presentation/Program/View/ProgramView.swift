@@ -37,7 +37,11 @@ final class ProgramView: UIView {
     // MARK: - Custom Method
     
     private func style() {
-        self.backgroundColor = .white
+        self.backgroundColor = .gray800
+        
+        programCollectionView.do {
+            $0.backgroundColor = .gray800
+        }
     }
     
     private func hieararchy() {
