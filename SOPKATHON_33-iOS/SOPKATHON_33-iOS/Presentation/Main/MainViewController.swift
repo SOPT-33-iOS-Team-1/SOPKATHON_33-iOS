@@ -27,7 +27,18 @@ final class MainViewController: BaseViewController {
         activityCardView.progressView1.progressAnimation(duration: 1, value: 0.9)
         activityCardView.progressView2.progressAnimation(duration: 1, value: 0.5)
         activityCardView.progressView3.progressAnimation(duration: 1, value: 0.6)
+        
+        target()
 
+    }
+    
+    private func target() {
+        activityCardView.showDetailButton.addTarget(self, action: #selector(detailButtonDidTap), for: .touchUpInside)
+    }
+    
+    @objc func detailButtonDidTap() {
+        let gelationDetailVC = GelationDetailView()
+        self.navigationController?.pushViewController(gelationDetailVC, animated: true)
     }
     
     private func setHierachy() {

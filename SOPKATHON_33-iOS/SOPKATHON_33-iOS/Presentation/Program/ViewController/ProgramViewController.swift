@@ -10,10 +10,15 @@ import UIKit
 import SnapKit
 import Then
 
-final class ProgramViewController: UIViewController {
+final class ProgramViewController: BaseViewController {
     
     //MARK: - UI Components
     
+    private var programData: [ProgramModel] = [] {
+        didSet {
+            rootView.programCollectionView.reloadData()
+        }
+    }
     private let rootView = ProgramView()
     
     //MARK: - Life Cycle
@@ -27,6 +32,7 @@ final class ProgramViewController: UIViewController {
         
         target()
         delegate()
+        requestProgramAPI(type: "VOLUNTEERING")
     }
     
     private func target() {
@@ -44,13 +50,20 @@ final class ProgramViewController: UIViewController {
     //MARK: - Action Method
     
     @objc func voluteerButtonDidTap() {
-        print(#function)
+        requestProgramAPI(type: "VOLUNTEERING")
     }
     @objc func employmentButtonDidTap() {
-        print(#function)
+        requestProgramAPI(type: "EMPLOYMENT")
     }
     @objc func statusSupportButtonDidTap() {
         print(#function)
+    }
+    
+    private func requestProgramAPI(type: String) {
+        MoyaAPI.shared.getProgramData(type: type) { [weak self] result in
+            guard let result = self?.validateResult(result) as? [ProgramModel] else { return }
+            self?.programData = result
+        }
     }
     
 }
@@ -67,7 +80,7 @@ extension ProgramViewController: UICollectionViewDelegateFlowLayout {
 
 extension ProgramViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return programData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

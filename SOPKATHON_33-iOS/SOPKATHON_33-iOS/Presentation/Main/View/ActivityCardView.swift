@@ -20,7 +20,7 @@ final class ActivityCardView: UIView {
     
     let activityStackView = ActivityStackView()
     private let divisionLine = UIView()
-    private let showDetailButton = UIButton()
+    let showDetailButton = UIButton()
     
     //MARK: - Life Cycle
     
