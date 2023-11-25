@@ -12,6 +12,12 @@ import Then
 
 final class MainViewController: BaseViewController {
     
+    private let logoImageView = UIImageView().then {
+        $0.image = Image.logo
+    }
+    private let backgroundImageView = UIImageView().then {
+        $0.image = Image.background
+    }
     private var mainData: MainModel?
     private let idCardView = IdCardView()
     private let activityCardView = ActivityCardView()
@@ -42,19 +48,33 @@ final class MainViewController: BaseViewController {
     }
     
     private func setHierachy() {
-        self.view.addSubviews(idCardView,
-                              activityCardView)
+        self.view.addSubview(backgroundImageView)
+        self.view.addSubviews(logoImageView,
+                                        idCardView,
+                                        activityCardView)
     }
     
     private func setLayout() {
+        logoImageView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(58.adjusted)
+            $0.leading.equalToSuperview().inset(25.adjusted)
+        }
+        
+        backgroundImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
         idCardView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(105.adjusted)
-            $0.centerX.equalToSuperview()
+            $0.leading.equalToSuperview().inset(20.adjusted)
+            $0.trailing.equalToSuperview().inset(20.adjusted)
         }
         
         activityCardView.snp.makeConstraints {
-            $0.top.equalTo(idCardView.snp.bottom).offset(15.adjusted)
-            $0.centerX.equalToSuperview()
+            $0.top.equalTo(idCardView.snp.bottom).offset(1.adjusted)
+            $0.leading.equalToSuperview().inset(25.adjusted)
+            $0.trailing.equalToSuperview().inset(25.adjusted)
+            $0.height.equalTo(405.adjusted)
         }
     }
     

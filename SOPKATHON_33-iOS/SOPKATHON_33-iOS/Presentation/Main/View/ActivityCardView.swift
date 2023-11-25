@@ -12,6 +12,9 @@ final class ActivityCardView: UIView {
     
     //MARK: - set Properties
     
+    private let backgroundImageView = UIImageView().then {
+        $0.image = Image.profileCard
+    }
     let progressView1 = ProgressView(frame: .init(origin: .zero, size: .init(width: 187,height: 187)))
     
     let progressView2 = ProgressView(frame: .init(origin: .zero, size: .init(width: 145,height: 145)))
@@ -44,13 +47,13 @@ final class ActivityCardView: UIView {
     
     private func setUI() {
         self.do {
-            $0.backgroundColor = .systemMint
+            $0.backgroundColor = .gray700
             $0.layer.cornerRadius = 8
         }
         
         
         divisionLine.do {
-            $0.setBorder(borderWidth: 1, borderColor: UIColor(red: 0.914, green: 0.922, blue: 0.929, alpha: 1))
+            $0.setBorder(borderWidth: 1, borderColor: .gray600)
         }
         showDetailButton.do {
             $0.backgroundColor = .clear
@@ -99,6 +102,7 @@ final class ActivityCardView: UIView {
         activityStackView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(255.adjusted)
             $0.leading.equalToSuperview().inset(20.adjusted)
+            $0.trailing.equalToSuperview().inset(24.adjusted)
         }
         
         divisionLine.snp.makeConstraints {
