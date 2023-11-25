@@ -14,6 +14,8 @@ final class DetailViewController: UIViewController {
     
     // MARK: - Properties
     
+    var id: Int?
+    
     private lazy var backButton = UIButton()
     private let backgroundImageView = UIImageView()
     private let scrollView = UIScrollView()
@@ -42,6 +44,11 @@ final class DetailViewController: UIViewController {
         setUI()
     }
     
+    @objc func backButtonDidTap() {
+        print(#function)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
 }
 
 // MARK: - Extensions
@@ -59,7 +66,10 @@ extension DetailViewController {
         backButton.do {
             $0.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
             $0.tintColor = .white
+            $0.addTarget(self, action: #selector(backButtonDidTap), for: .touchUpInside)
         }
+        
+        
         
         backgroundImageView.do {
             $0.image = Image.dummy1
@@ -159,7 +169,7 @@ extension DetailViewController {
     }
     
     private func setLayout() {
-        view.addSubviews(backButton, backgroundImageView, scrollView, applyView)
+        view.addSubviews(backgroundImageView, scrollView, applyView)
         
         backgroundImageView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
