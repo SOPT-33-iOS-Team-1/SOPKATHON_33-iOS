@@ -9,7 +9,7 @@ import UIKit
 
 final class ActivityStackViewItem: UIView {
     
-    private let circleImageView = UIImageView()
+    var circleImageView = UIImageView()
     var titleLabel = UILabel()
     var valueLabel = UILabel()
     
@@ -27,16 +27,15 @@ final class ActivityStackViewItem: UIView {
     }
     
     private func setUI() {
-        circleImageView.do {
-            $0.image = UIImage(named: "circle-small")
-        }
         
         titleLabel.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
+            $0.textColor = .white
         }
         
         valueLabel.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
+            $0.textColor = .white
         }
     }
     

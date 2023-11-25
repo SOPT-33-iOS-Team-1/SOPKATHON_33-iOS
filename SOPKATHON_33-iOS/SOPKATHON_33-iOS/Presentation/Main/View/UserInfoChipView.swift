@@ -28,15 +28,16 @@ final class UserInfoChipView: UIView {
         fatalError("init(coder: NSCoder) has not been implemented")
     }
     
+    
     private func setUI() {
         self.do {
-            $0.backgroundColor = .white
+            $0.backgroundColor = .blue0
             $0.layer.cornerRadius = 7
         }
         
         infoLabel.do {
             $0.font = UIFont(name: "Pretendard-Regular", size: 12.adjusted)
-            $0.textColor = .systemPurple
+            $0.textColor = .blue3
         }
     }
     

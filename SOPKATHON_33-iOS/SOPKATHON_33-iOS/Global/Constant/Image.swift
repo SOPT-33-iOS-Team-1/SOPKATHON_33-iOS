@@ -29,8 +29,9 @@ public enum Image {
     static let background = UIImage(named: "img_mainbackground")
     static let profileCard = UIImage(named: "img_profile")
     static let logo = UIImage(named: "logo")
+    static let logo2 = UIImage(named: "logo2")
     static let ring = UIImage(named: "ring")
-    
+    static let profile = UIImage(named: "ic_profile")
     //MARK: - Dummy
     
     static let dummy1 = UIImage(named: "img_1_1")

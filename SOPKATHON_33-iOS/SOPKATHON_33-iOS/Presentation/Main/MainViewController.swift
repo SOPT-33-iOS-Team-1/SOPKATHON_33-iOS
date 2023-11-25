@@ -12,6 +12,12 @@ import Then
 
 final class MainViewController: BaseViewController {
     
+    private let logoImageView = UIImageView().then {
+        $0.image = Image.logo
+    }
+    private let backgroundImageView = UIImageView().then {
+        $0.image = Image.background
+    }
     private var mainData: MainModel?
     private let idCardView = IdCardView()
     private let activityCardView = ActivityCardView()
@@ -27,23 +33,48 @@ final class MainViewController: BaseViewController {
         activityCardView.progressView1.progressAnimation(duration: 1, value: 0.9)
         activityCardView.progressView2.progressAnimation(duration: 1, value: 0.5)
         activityCardView.progressView3.progressAnimation(duration: 1, value: 0.6)
+        
+        target()
 
     }
     
+    private func target() {
+        activityCardView.showDetailButton.addTarget(self, action: #selector(detailButtonDidTap), for: .touchUpInside)
+    }
+    
+    @objc func detailButtonDidTap() {
+        let gelationDetailVC = GelationDetailView()
+        self.navigationController?.pushViewController(gelationDetailVC, animated: true)
+    }
+    
     private func setHierachy() {
-        self.view.addSubviews(idCardView,
-                              activityCardView)
+        self.view.addSubview(backgroundImageView)
+        self.view.addSubviews(logoImageView,
+                                        idCardView,
+                                        activityCardView)
     }
     
     private func setLayout() {
+        logoImageView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(58.adjusted)
+            $0.leading.equalToSuperview().inset(25.adjusted)
+        }
+        
+        backgroundImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
         idCardView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(105.adjusted)
-            $0.centerX.equalToSuperview()
+            $0.leading.equalToSuperview().inset(20.adjusted)
+            $0.trailing.equalToSuperview().inset(20.adjusted)
         }
         
         activityCardView.snp.makeConstraints {
-            $0.top.equalTo(idCardView.snp.bottom).offset(15.adjusted)
-            $0.centerX.equalToSuperview()
+            $0.top.equalTo(idCardView.snp.bottom).offset(1.adjusted)
+            $0.leading.equalToSuperview().inset(25.adjusted)
+            $0.trailing.equalToSuperview().inset(25.adjusted)
+            $0.height.equalTo(405.adjusted)
         }
     }
     
