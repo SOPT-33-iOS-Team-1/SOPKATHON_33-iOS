@@ -15,6 +15,8 @@ final class DetailViewController: UIViewController {
     // MARK: - Properties
     
     private lazy var backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: nil)
+    private let scrollView = UIScrollView()
+    private var contentView = UIView()
     private let applyView = UIView()
     private lazy var applyButton = UIButton()
     
@@ -42,6 +44,10 @@ extension DetailViewController {
     }
     
     private func setStyle() {
+        scrollView.do {
+            $0.showsVerticalScrollIndicator = false
+        }
+        
         applyView.do {
             $0.backgroundColor = .white
         }
@@ -56,7 +62,20 @@ extension DetailViewController {
     }
     
     private func setLayout() {
-        view.addSubview(applyView)
+        view.addSubviews(scrollView, applyView)
+        
+        scrollView.snp.makeConstraints {
+            $0.top.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(applyView)
+        }
+        
+        scrollView.addSubview(contentView)
+        
+        contentView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+            $0.width.equalToSuperview()
+            $0.height.greaterThanOrEqualToSuperview()
+        }
         
         applyView.snp.makeConstraints {
             $0.leading.trailing.bottom.equalToSuperview()
