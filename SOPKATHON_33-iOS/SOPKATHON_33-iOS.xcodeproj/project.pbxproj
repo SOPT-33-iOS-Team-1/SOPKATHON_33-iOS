@@ -51,6 +51,7 @@
 		D28379F92B0FC27C00A1903B /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28379F02B0FC27C00A1903B /* Pretendard-SemiBold.otf */; };
 		D28379FA2B0FC27C00A1903B /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = D28379F12B0FC27C00A1903B /* Pretendard-Regular.otf */; };
 		D28379FC2B0FC53500A1903B /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = D28379FB2B0FC53500A1903B /* Device.swift */; };
+		E5CD4BEB2B1238AC00CF9D17 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BEA2B1238AC00CF9D17 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +96,7 @@
 		D28379F02B0FC27C00A1903B /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		D28379F12B0FC27C00A1903B /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		D28379FB2B0FC53500A1903B /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		E5CD4BEA2B1238AC00CF9D17 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		D28379AC2B0FBB5300A1903B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E5CD4BE82B12388E00CF9D17 /* Base */,
 				D206CADB2B0FB748007ECC1B /* ViewController.swift */,
 			);
 			path = Presentation;
@@ -270,6 +273,14 @@
 				D28379E12B0FC04C00A1903B /* VoidResult.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		E5CD4BE82B12388E00CF9D17 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				E5CD4BEA2B1238AC00CF9D17 /* TabBarController.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +399,7 @@
 				D28379DB2B0FBE7500A1903B /* BaseTargetType.swift in Sources */,
 				D28379DF2B0FBFFC00A1903B /* Adjusted+.swift in Sources */,
 				D28379CB2B0FBC5500A1903B /* UITableViewCell+.swift in Sources */,
+				E5CD4BEB2B1238AC00CF9D17 /* TabBarController.swift in Sources */,
 				D28379C92B0FBC4B00A1903B /* UITableHeaderFooterView+.swift in Sources */,
 				D28379CF2B0FBC6900A1903B /* UIView+.swift in Sources */,
 				D206CADA2B0FB748007ECC1B /* SceneDelegate.swift in Sources */,
