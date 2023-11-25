@@ -10,6 +10,9 @@
 		00B6F46D2B1224F3008F7396 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 00B6F46C2B1224F3008F7396 /* Tabman */; };
 		A19A1F522B12451B0077ACEC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A1F512B12451B0077ACEC /* MainViewController.swift */; };
 		A19A1F552B1245330077ACEC /* IdCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A1F542B1245330077ACEC /* IdCardView.swift */; };
+		A19A1F572B12514E0077ACEC /* ActivityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A1F562B12514E0077ACEC /* ActivityCardView.swift */; };
+		A19A1F5B2B1255CF0077ACEC /* ActivityStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A1F5A2B1255CF0077ACEC /* ActivityStackView.swift */; };
+		A19A1F5D2B1258490077ACEC /* ActivityStackViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19A1F5C2B1258490077ACEC /* ActivityStackViewItem.swift */; };
 		D206CAD82B0FB748007ECC1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAD72B0FB748007ECC1B /* AppDelegate.swift */; };
 		D206CADA2B0FB748007ECC1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAD92B0FB748007ECC1B /* SceneDelegate.swift */; };
 		D206CADC2B0FB748007ECC1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CADB2B0FB748007ECC1B /* ViewController.swift */; };
@@ -59,6 +62,9 @@
 /* Begin PBXFileReference section */
 		A19A1F512B12451B0077ACEC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A19A1F542B1245330077ACEC /* IdCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdCardView.swift; sourceTree = "<group>"; };
+		A19A1F562B12514E0077ACEC /* ActivityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardView.swift; sourceTree = "<group>"; };
+		A19A1F5A2B1255CF0077ACEC /* ActivityStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStackView.swift; sourceTree = "<group>"; };
+		A19A1F5C2B1258490077ACEC /* ActivityStackViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStackViewItem.swift; sourceTree = "<group>"; };
 		D206CAD42B0FB748007ECC1B /* SOPKATHON_33-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SOPKATHON_33-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D206CAD72B0FB748007ECC1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D206CAD92B0FB748007ECC1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +138,9 @@
 			isa = PBXGroup;
 			children = (
 				A19A1F542B1245330077ACEC /* IdCardView.swift */,
+				A19A1F562B12514E0077ACEC /* ActivityCardView.swift */,
+				A19A1F5A2B1255CF0077ACEC /* ActivityStackView.swift */,
+				A19A1F5C2B1258490077ACEC /* ActivityStackViewItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -403,6 +412,7 @@
 				D28379B92B0FBBEA00A1903B /* UIApplication+.swift in Sources */,
 				D28379E22B0FC04C00A1903B /* VoidResult.swift in Sources */,
 				D28379D72B0FBDDC00A1903B /* MoyaLoggerPlugin.swift in Sources */,
+				A19A1F5B2B1255CF0077ACEC /* ActivityStackView.swift in Sources */,
 				D28379E42B0FC06C00A1903B /* SimpleResponse.swift in Sources */,
 				D28379C32B0FBC2900A1903B /* UILabel+.swift in Sources */,
 				D28379C52B0FBC3700A1903B /* UINavagationController+.swift in Sources */,
@@ -417,6 +427,7 @@
 				D28379CD2B0FBC5F00A1903B /* UITextField+.swift in Sources */,
 				D206CADC2B0FB748007ECC1B /* ViewController.swift in Sources */,
 				D28379C72B0FBC4100A1903B /* UIStackView+.swift in Sources */,
+				A19A1F572B12514E0077ACEC /* ActivityCardView.swift in Sources */,
 				D28379D32B0FBC8900A1903B /* String+.swift in Sources */,
 				D206CAD82B0FB748007ECC1B /* AppDelegate.swift in Sources */,
 				D28379E62B0FC08200A1903B /* GenericResponse.swift in Sources */,
@@ -425,6 +436,7 @@
 				D28379CB2B0FBC5500A1903B /* UITableViewCell+.swift in Sources */,
 				E5CD4BEB2B1238AC00CF9D17 /* TabBarController.swift in Sources */,
 				D28379C92B0FBC4B00A1903B /* UITableHeaderFooterView+.swift in Sources */,
+				A19A1F5D2B1258490077ACEC /* ActivityStackViewItem.swift in Sources */,
 				D28379CF2B0FBC6900A1903B /* UIView+.swift in Sources */,
 				D206CADA2B0FB748007ECC1B /* SceneDelegate.swift in Sources */,
 				D28379BD2B0FBC0400A1903B /* UICollectionReuseableView+.swift in Sources */,
