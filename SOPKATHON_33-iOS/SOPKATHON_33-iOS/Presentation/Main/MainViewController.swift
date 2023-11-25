@@ -45,6 +45,7 @@ final class MainViewController: BaseViewController {
     @objc func detailButtonDidTap() {
         let gelationDetailVC = GelationDetailView()
         self.navigationController?.pushViewController(gelationDetailVC, animated: true)
+        
     }
     
     private func setHierachy() {

@@ -101,7 +101,7 @@ class GelationCollectionViewCell: UICollectionViewCell {
         
         cardTitle.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
-            $0.textColor = .black
+            $0.textColor = .white
             $0.numberOfLines = 0
         }
         

@@ -29,7 +29,7 @@ final class  GelationDetailView: BaseViewController {
     }
     
     private func setStyle() {
-        self.navigationController?.navigationBar.isHidden = true
+        
         gelationViewbackButton.addTarget(self, action: #selector(handleListTap), for: .touchUpInside)
     }
     

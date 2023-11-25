@@ -74,11 +74,13 @@ extension DetailViewController {
         backButton.do {
             $0.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
             $0.tintColor = .white
+            $0.addTarget(self, action: #selector(backButtonDidTap), for: .touchUpInside)
         }
         
         
         backgroundImageView.do {
             $0.image = Image.dummy1
+            $0.isUserInteractionEnabled = true
         }
         
         scrollView.do {
@@ -174,6 +176,14 @@ extension DetailViewController {
         }
     }
     
+    @objc func backButtonDidTap() {
+        if let navigationVC = self.navigationController {
+            navigationVC.popViewController(animated: true)
+        } else {
+            print("없어")
+        }
+    }
+    
     private func setLayout() {
         view.addSubviews(backgroundImageView, scrollView, applyView)
         
@@ -187,11 +197,12 @@ extension DetailViewController {
         backButton.snp.makeConstraints {
             $0.top.equalToSuperview().inset(60)
             $0.leading.equalToSuperview().inset(17)
-            $0.size.equalTo(24)
+            $0.size.equalTo(50)
         }
         
         scrollView.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
+            $0.top.equalTo(backButton.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(applyView.snp.top)
         }
         
