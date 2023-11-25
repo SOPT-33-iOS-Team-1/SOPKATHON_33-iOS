@@ -47,6 +47,15 @@ final class MainViewController: BaseViewController {
         MoyaAPI.shared.getMainData { [weak self] result in
             guard let result = self?.validateResult(result) as? MainModel else { return }
             self?.mainData = result
+            self?.dataBind()
         }
+    }
+    
+    private func dataBind() {
+        DispatchQueue.main.async {
+            self.idCardView.dataBind(self.mainData)
+            self.activityCardView.activityStackView.dataBind(self.mainData)
+        }
+
     }
 }

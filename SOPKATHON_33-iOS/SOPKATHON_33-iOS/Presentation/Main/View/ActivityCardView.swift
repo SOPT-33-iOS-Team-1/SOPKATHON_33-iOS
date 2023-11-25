@@ -12,7 +12,7 @@ final class ActivityCardView: UIView {
     //MARK: - set Properties
     
     private let ringImageView = UIImageView()
-    private let activityStackView = ActivityStackView()
+    let activityStackView = ActivityStackView()
     private let divisionLine = UIView()
     private let showDetailButton = UIButton()
     
