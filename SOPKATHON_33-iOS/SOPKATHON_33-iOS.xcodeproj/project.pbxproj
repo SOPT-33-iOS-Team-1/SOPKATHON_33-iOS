@@ -40,6 +40,7 @@
 		D26AFFF02B1291DC007B90DF /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFEF2B1291DC007B90DF /* ProgressView.swift */; };
 		D26AFFF22B129A8F007B90DF /* ProgramModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFF12B129A8F007B90DF /* ProgramModel.swift */; };
 		D26AFFF42B12AA8A007B90DF /* DetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFF32B12AA8A007B90DF /* DetailModel.swift */; };
+		D26AFFF62B12B2AA007B90DF /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFF52B12B2AA007B90DF /* RegisterModel.swift */; };
 		D28379A12B0FB83A00A1903B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A02B0FB83A00A1903B /* SnapKit */; };
 		D28379A42B0FB84300A1903B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A32B0FB84300A1903B /* Then */; };
 		D28379A72B0FB86500A1903B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A62B0FB86500A1903B /* Moya */; };
@@ -120,6 +121,7 @@
 		D26AFFEF2B1291DC007B90DF /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		D26AFFF12B129A8F007B90DF /* ProgramModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramModel.swift; sourceTree = "<group>"; };
 		D26AFFF32B12AA8A007B90DF /* DetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModel.swift; sourceTree = "<group>"; };
+		D26AFFF52B12B2AA007B90DF /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		D28379B82B0FBBEA00A1903B /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		D28379BA2B0FBBF500A1903B /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		D28379BC2B0FBC0400A1903B /* UICollectionReuseableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReuseableView+.swift"; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				D26AFFED2B128915007B90DF /* GelationModel.swift */,
 				D26AFFF12B129A8F007B90DF /* ProgramModel.swift */,
 				D26AFFF32B12AA8A007B90DF /* DetailModel.swift */,
+				D26AFFF52B12B2AA007B90DF /* RegisterModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				D28379E22B0FC04C00A1903B /* VoidResult.swift in Sources */,
 				D28379D72B0FBDDC00A1903B /* MoyaLoggerPlugin.swift in Sources */,
 				0083D7042B12A3450084766E /* SupportTopView.swift in Sources */,
+				D26AFFF62B12B2AA007B90DF /* RegisterModel.swift in Sources */,
 				0083D7022B12A2280084766E /* SupportView.swift in Sources */,
 				A19A1F5B2B1255CF0077ACEC /* ActivityStackView.swift in Sources */,
 				D28379E42B0FC06C00A1903B /* SimpleResponse.swift in Sources */,

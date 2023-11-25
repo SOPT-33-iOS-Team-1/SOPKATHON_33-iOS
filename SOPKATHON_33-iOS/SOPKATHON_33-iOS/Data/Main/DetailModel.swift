@@ -4,7 +4,7 @@
 //
 //  Created by 류희재 on 2023/11/26.
 //
-
+//
 struct DetailModel: Codable {
     let imageURL, content, organizationName, registerAt: String
     let salary: Int?

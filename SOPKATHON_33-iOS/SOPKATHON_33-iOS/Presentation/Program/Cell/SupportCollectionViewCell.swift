@@ -100,7 +100,11 @@ final class SupportCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func dataBind() {
+    func dataBind(_ data: RegisterModel) {
+        titleLabel.text = data.title
+        backgroundImageView.kfSetImage(url: data.imageURL)
+        areaLabel.text = data.region
+        updateLabel.text = data.registerAt
     }
 }
 

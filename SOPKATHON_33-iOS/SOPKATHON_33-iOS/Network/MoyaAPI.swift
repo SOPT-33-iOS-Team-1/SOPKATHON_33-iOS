@@ -50,5 +50,14 @@ extension MoyaAPI {
                 completion: completion)
         }
     }
+    
+    public func getProgramRegisterData(completion: @escaping (NetworkResult<Any>) -> Void) {
+        provider.request(.getRegisterData) { (result) in
+            self.disposeNetwork(
+                result,
+                dataModel: [RegisterModel].self,
+                completion: completion)
+        }
+    }
 }
 
