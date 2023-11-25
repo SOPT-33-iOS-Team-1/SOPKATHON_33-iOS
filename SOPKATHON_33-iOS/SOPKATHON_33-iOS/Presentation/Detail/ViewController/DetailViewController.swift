@@ -18,8 +18,8 @@ final class DetailViewController: UIViewController {
     private let backgroundImageView = UIImageView()
     private let scrollView = UIScrollView()
     private var contentView = UIView()
-    private let titleLabel = UILabel()
-    private let bodyLabel = UILabel()
+    let titleLabel = UILabel()
+    let bodyLabel = UILabel()
     private let lineView = UIView()
     private let applyView = UIView()
     private lazy var applyButton = UIButton()
@@ -143,4 +143,10 @@ extension DetailViewController {
         self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
         self.navigationItem.leftBarButtonItem = backButton
     }
+    
+//    func bindData(data: ProgramData) {
+//        self.titleLabel.text = data.title
+//        self.bodyLabel.text = data.body
+//    }
+    
 }
