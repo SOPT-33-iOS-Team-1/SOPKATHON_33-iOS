@@ -14,7 +14,7 @@ final class DetailViewController: UIViewController {
     
     // MARK: - Properties
     
-    private lazy var backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: nil)
+    private lazy var backButton = UIButton()
     private let backgroundImageView = UIImageView()
     private let scrollView = UIScrollView()
     private var contentView = UIView()
@@ -48,6 +48,11 @@ extension DetailViewController {
     }
     
     private func setStyle() {
+        backButton.do {
+            $0.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+            $0.tintColor = .black
+        }
+        
         scrollView.do {
             $0.showsVerticalScrollIndicator = false
             $0.alwaysBounceVertical = true
@@ -86,11 +91,19 @@ extension DetailViewController {
     }
     
     private func setLayout() {
-        view.addSubviews(backgroundImageView, scrollView, applyView)
+        view.addSubviews(backButton, backgroundImageView, scrollView, applyView)
         
         backgroundImageView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(applyView.snp.top)
+        }
+        
+        backgroundImageView.addSubview(backButton)
+        
+        backButton.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(60)
+            $0.leading.equalToSuperview().inset(17)
+            $0.size.equalTo(24)
         }
         
         scrollView.snp.makeConstraints {
@@ -141,7 +154,6 @@ extension DetailViewController {
     private func setNavigation() {
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.backButtonTitle = ""
-        self.navigationItem.leftBarButtonItem = backButton
     }
     
 //    func bindData(data: ProgramData) {
