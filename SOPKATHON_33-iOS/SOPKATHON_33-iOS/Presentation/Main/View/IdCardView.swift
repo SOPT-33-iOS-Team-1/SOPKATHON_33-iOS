@@ -15,12 +15,13 @@ final class IdCardView: UIView {
     //MARK: - set Properties
     
     private let userName = UILabel()
-    private let userAge = UILabel()
-    private let userGender = UILabel()
     private let userCrimeHistory = UILabel()
     private let userCrimeYearAgo = UILabel()
     private let userImageView = UIImageView()
     private let editProfileButton = UIButton()
+    
+    private let ageChipView = UserInfoChipView()
+    private let genderChipView = UserInfoChipView()
     
     //MARK: - Life Cycle
     
@@ -50,16 +51,16 @@ final class IdCardView: UIView {
             $0.font = UIFont(name: "Pretendard-Semibold", size: 18.adjusted)
         }
         
-        userAge.do {
-            $0.text = "23세"
-            $0.font = UIFont(name: "Pretendard-Regular", size: 14.adjusted)
+        ageChipView.do {
+            $0.infoLabel.text = "23세"
+            $0.labelWidth = 42.adjusted
         }
         
-        userGender.do {
-            $0.text = "남성"
-            $0.font = UIFont(name: "Pretendard-Regular", size: 14.adjusted)
+        genderChipView.do {
+            $0.infoLabel.text = "남성"
+            $0.labelWidth = 37.adjusted
         }
-        
+
         userCrimeHistory.do {
             $0.text = "범죄이력을 입력해주세요."
             $0.font = UIFont(name: "Pretendard-Regular", size: 14.adjusted)
@@ -89,8 +90,8 @@ final class IdCardView: UIView {
     
     private func setHierachy() {
         self.addSubviews(userName,
-                         userAge,
-                         userGender,
+                         ageChipView,
+                         genderChipView,
                          userCrimeHistory,
                          userCrimeYearAgo,
                          userImageView,
@@ -112,16 +113,18 @@ final class IdCardView: UIView {
             $0.leading.equalToSuperview().inset(25.adjusted)
         }
         
-        userAge.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(67.adjusted)
+        ageChipView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(68.adjusted)
             $0.leading.equalToSuperview().inset(25.adjusted)
+            $0.width.equalTo(ageChipView.labelWidth)
         }
         
-        userGender.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(67.adjusted)
-            $0.leading.equalToSuperview().inset(61.adjusted)
+        genderChipView.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(68.adjusted)
+            $0.leading.equalToSuperview().inset(73.adjusted)
+            $0.width.equalTo(genderChipView.labelWidth)
         }
-        
+
         userCrimeHistory.snp.makeConstraints {
             $0.top.equalToSuperview().inset(98.adjusted)
             $0.leading.equalToSuperview().inset(25.adjusted)
