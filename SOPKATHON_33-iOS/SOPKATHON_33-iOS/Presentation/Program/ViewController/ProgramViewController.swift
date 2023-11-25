@@ -56,7 +56,8 @@ final class ProgramViewController: BaseViewController {
         requestProgramAPI(type: "EMPLOYMENT")
     }
     @objc func statusSupportButtonDidTap() {
-        print(#function)
+        let supportViewController = SupportViewController()
+        self.navigationController?.pushViewController(supportViewController, animated: true)
     }
     
     private func requestProgramAPI(type: String) {

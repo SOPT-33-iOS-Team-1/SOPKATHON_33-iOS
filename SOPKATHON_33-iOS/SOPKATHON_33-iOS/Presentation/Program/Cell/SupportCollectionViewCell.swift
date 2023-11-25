@@ -1,8 +1,8 @@
 //
-//  ProgramCollectionViewCell.swift
+//  SupportCollectionViewCell.swift
 //  SOPKATHON_33-iOS
 //
-//  Created by 류희재 on 2023/11/26.
+//  Created by 티모시 킴 on 11/26/23.
 //
 
 import UIKit
@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class ProgramCollectionViewCell: UICollectionViewCell {
+final class SupportCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Components
     
@@ -103,4 +103,5 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
     func dataBind() {
     }
 }
+
 
