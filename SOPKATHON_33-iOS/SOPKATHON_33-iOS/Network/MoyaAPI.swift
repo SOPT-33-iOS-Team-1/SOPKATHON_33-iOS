@@ -33,8 +33,8 @@ extension MoyaAPI {
         }
     }
     
-    public func getProgramData(completion: @escaping (NetworkResult<Any>) -> Void) {
-        provider.request(.getProgramData) { (result) in
+    public func getProgramData(type: String, completion: @escaping (NetworkResult<Any>) -> Void) {
+        provider.request(.getProgramData(type: type)) { (result) in
             self.disposeNetwork(
                 result,
                 dataModel: [ProgramModel].self,

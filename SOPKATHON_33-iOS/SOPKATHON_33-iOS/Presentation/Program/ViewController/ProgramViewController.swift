@@ -32,7 +32,7 @@ final class ProgramViewController: BaseViewController {
         
         target()
         delegate()
-        requestProgramAPI()
+        requestProgramAPI(type: "VOLUNTEERING")
     }
     
     private func target() {
@@ -50,17 +50,17 @@ final class ProgramViewController: BaseViewController {
     //MARK: - Action Method
     
     @objc func voluteerButtonDidTap() {
-        print(#function)
+        requestProgramAPI(type: "VOLUNTEERING")
     }
     @objc func employmentButtonDidTap() {
-        print(#function)
+        requestProgramAPI(type: "EMPLOYMENT")
     }
     @objc func statusSupportButtonDidTap() {
         print(#function)
     }
     
-    private func requestProgramAPI() {
-        MoyaAPI.shared.getProgramData() { [weak self] result in
+    private func requestProgramAPI(type: String) {
+        MoyaAPI.shared.getProgramData(type: type) { [weak self] result in
             guard let result = self?.validateResult(result) as? [ProgramModel] else { return }
             self?.programData = result
         }

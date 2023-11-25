@@ -13,7 +13,7 @@ import UIKit
 enum MoyaService {
     case getMainData
     case getGelationData
-    case getProgramData
+    case getProgramData(type: String)
 }
 
 extension MoyaService: BaseTargetType {
@@ -46,8 +46,8 @@ extension MoyaService: BaseTargetType {
             return .requestPlain
         case .getGelationData:
             return .requestPlain
-        case .getProgramData:
-            return .requestParameters(parameters: ["program_type": "VOLUNTEERING"], encoding: URLEncoding.default)
+        case .getProgramData(let type):
+            return .requestParameters(parameters: ["program_type": type], encoding: URLEncoding.default)
         }
     }
 }
