@@ -14,6 +14,7 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Components
     
+    private let backgroundImageView = UIImageView()
     private let titleLabel = UILabel()
     private let areaLabel = UILabel()
     private let updateLabel = UILabel()
@@ -36,27 +37,33 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
     
     private func style() {
         contentView.do {
-            $0.backgroundColor = .yellow
+            $0.backgroundColor = .gray700
             $0.makeCornerRound(ratio: 10)
+        }
+        
+        backgroundImageView.do {
+            $0.contentMode = .scaleAspectFit
+            $0.image = Image.dummy1
         }
         
         titleLabel.do {
             $0.text = "프로그램 명을 입력해주세요."
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14)
-            $0.textColor = .black
+            $0.textColor = .white
             $0.textAlignment = .left
+            $0.numberOfLines = 0
         }
         
         areaLabel.do {
             $0.text = "솝트광역시"
             $0.font = UIFont(name: "Pretendard-regular", size: 12)
-            $0.textColor = .black
+            $0.textColor = .gray400
             $0.textAlignment = .left
         }
         updateLabel.do {
             $0.text = "00.00"
             $0.font = UIFont(name: "Pretendard-regular", size: 12)
-            $0.textColor = .black
+            $0.textColor = .gray400
             $0.textAlignment = .left
         }
         
@@ -64,6 +71,7 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
     
     private func hieararchy() {
         contentView.addSubviews(
+            backgroundImageView,
             titleLabel,
             areaLabel,
             updateLabel
@@ -71,8 +79,13 @@ final class ProgramCollectionViewCell: UICollectionViewCell {
     }
     
     private func layout() {
+        backgroundImageView.snp.makeConstraints {
+            $0.top.leading.trailing.equalToSuperview()
+            $0.height.equalTo(115)
+        }
+        
         titleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(135.adjusted)
+            $0.top.equalToSuperview().offset(130.adjusted)
             $0.leading.trailing.equalToSuperview().inset(12.adjusted)
         }
         
