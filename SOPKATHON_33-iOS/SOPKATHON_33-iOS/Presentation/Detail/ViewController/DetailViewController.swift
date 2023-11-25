@@ -49,11 +49,6 @@ final class DetailViewController: BaseViewController {
         requestDetailAPI()
     }
     
-    @objc func backButtonDidTap() {
-        print(#function)
-        self.navigationController?.popViewController(animated: true)
-    }
-    
     func requestDetailAPI() {
         guard let id else { return }
         MoyaAPI.shared.getProgramDetailData(id: id) { [weak self] result in
@@ -79,8 +74,8 @@ extension DetailViewController {
         backButton.do {
             $0.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
             $0.tintColor = .white
-            $0.addTarget(self, action: #selector(backButtonDidTap), for: .touchUpInside)
         }
+        
         
         backgroundImageView.do {
             $0.image = Image.dummy1
