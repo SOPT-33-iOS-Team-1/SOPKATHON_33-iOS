@@ -18,7 +18,7 @@ class SplashView: UIViewController {
         view.backgroundColor = .black
         setLayout()
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-                    self.present(TabBarController(), animated: false)
+                    self.navigationController?.pushViewController(TabBarController(), animated: false)
                 }
     }
     
