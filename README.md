@@ -76,6 +76,6 @@
 <br/>
 
 <h2> 📸팀원끼리 응원의 메시지를 담은 사진 촬영 </h2>
-<img src=""  alt="솝커톤-응원사진" />
+<img src="https://github.com/SOPT-33-iOS-Team-1/SOPKATHON_33-iOS/assets/54922625/33a1d81b-b806-4c35-a9eb-7fff0fe40f87"  alt="솝커톤-응원사진" />
 
 
