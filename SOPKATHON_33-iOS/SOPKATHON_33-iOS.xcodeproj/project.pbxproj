@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B6F46D2B1224F3008F7396 /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = 00B6F46C2B1224F3008F7396 /* Tabman */; };
 		D206CAD82B0FB748007ECC1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAD72B0FB748007ECC1B /* AppDelegate.swift */; };
 		D206CADA2B0FB748007ECC1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CAD92B0FB748007ECC1B /* SceneDelegate.swift */; };
 		D206CADC2B0FB748007ECC1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CADB2B0FB748007ECC1B /* ViewController.swift */; };
@@ -101,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00B6F46D2B1224F3008F7396 /* Tabman in Frameworks */,
 				D28379AA2B0FB87200A1903B /* Kingfisher in Frameworks */,
 				D28379A12B0FB83A00A1903B /* SnapKit in Frameworks */,
 				D28379A42B0FB84300A1903B /* Then in Frameworks */,
@@ -291,6 +293,7 @@
 				D28379A32B0FB84300A1903B /* Then */,
 				D28379A62B0FB86500A1903B /* Moya */,
 				D28379A92B0FB87200A1903B /* Kingfisher */,
+				00B6F46C2B1224F3008F7396 /* Tabman */,
 			);
 			productName = "SOPKATHON_33-iOS";
 			productReference = D206CAD42B0FB748007ECC1B /* SOPKATHON_33-iOS.app */;
@@ -325,6 +328,7 @@
 				D28379A22B0FB84300A1903B /* XCRemoteSwiftPackageReference "Then" */,
 				D28379A52B0FB86500A1903B /* XCRemoteSwiftPackageReference "Moya" */,
 				D28379A82B0FB87200A1903B /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				00B6F46B2B1224F3008F7396 /* XCRemoteSwiftPackageReference "Tabman" */,
 			);
 			productRefGroup = D206CAD52B0FB748007ECC1B /* Products */;
 			projectDirPath = "";
@@ -598,6 +602,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		00B6F46B2B1224F3008F7396 /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
 		D283799F2B0FB83A00A1903B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -633,6 +645,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		00B6F46C2B1224F3008F7396 /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00B6F46B2B1224F3008F7396 /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
+		};
 		D28379A02B0FB83A00A1903B /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D283799F2B0FB83A00A1903B /* XCRemoteSwiftPackageReference "SnapKit" */;
