@@ -11,8 +11,11 @@ class GelationCollectionViewCell: UICollectionViewCell {
     
     private var backgroundImage = UIView()
     private var cardTitle = UILabel()
+    private var cardIcon = UIImage()
     private var list1 = UILabel()
     private var list2 = UILabel()
+    private var list3 = UILabel()
+    private var list4 = UILabel()
     
     static let identifier = "GelationCollectionViewCell"
     
@@ -34,12 +37,14 @@ class GelationCollectionViewCell: UICollectionViewCell {
         self.cardTitle.text = data.cardTitle
         self.list1.text = data.list1
         self.list2.text = data.list2
+        self.list3.text = data.list3
+        self.list4.text = data.list4
     }
     
     
     private func setLayout() {
         self.addSubviews(backgroundImage)
-        backgroundImage.addSubviews(cardTitle, list1, list2)
+        backgroundImage.addSubviews(cardTitle, list1, list2, list3, list4)
         
         backgroundImage.snp.makeConstraints {
             $0.leading.top.bottom.equalToSuperview()
@@ -63,14 +68,25 @@ class GelationCollectionViewCell: UICollectionViewCell {
             $0.top.equalToSuperview().inset(47.adjusted)
         }
         
+        list3.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(150.adjusted)
+            $0.top.equalToSuperview().inset(74.adjusted)
+        }
+        
+        list4.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(150.adjusted)
+            $0.top.equalToSuperview().inset(101.adjusted)
+        }
+        
         backgroundImage.do {
             $0.frame = CGRect(x: 0, y: 0, width: 335.adjusted, height: 205.adjusted)
-            $0.backgroundColor = .lightGray
+            $0.backgroundColor = .white
             $0.makeCornerRound(radius: 10)
         }
         
         cardTitle.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
+            $0.textColor = .white
             $0.numberOfLines = 0
         }
         
@@ -79,6 +95,14 @@ class GelationCollectionViewCell: UICollectionViewCell {
         }
         
         list2.do {
+            $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
+        }
+        
+        list3.do {
+            $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
+        }
+        
+        list4.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
         }
         

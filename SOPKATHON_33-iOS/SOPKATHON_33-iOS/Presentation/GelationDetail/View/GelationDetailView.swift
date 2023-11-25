@@ -42,7 +42,7 @@ final class  GelationDetailView: UIViewController {
     }
     
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
-            $0.backgroundColor = .white
+            $0.backgroundColor = .black
         }
     
     private func setCollectionView() {
