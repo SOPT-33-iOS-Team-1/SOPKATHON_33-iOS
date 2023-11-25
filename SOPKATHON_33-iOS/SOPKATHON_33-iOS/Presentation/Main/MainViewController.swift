@@ -10,8 +10,9 @@ import UIKit
 import SnapKit
 import Then
 
-final class MainViewController: UIViewController {
+final class MainViewController: BaseViewController {
     
+    private var mainData: MainModel?
     private let idCardView = IdCardView()
     private let activityCardView = ActivityCardView()
     private let activityStackView = ActivityStackView()
@@ -22,6 +23,7 @@ final class MainViewController: UIViewController {
         
         self.setHierachy()
         self.setLayout()
+        requestMainData()
     }
     
     private func setHierachy() {
@@ -38,6 +40,13 @@ final class MainViewController: UIViewController {
         activityCardView.snp.makeConstraints {
             $0.top.equalTo(idCardView.snp.bottom).offset(15.adjusted)
             $0.centerX.equalToSuperview()
+        }
+    }
+    
+    private func requestMainData() {
+        MoyaAPI.shared.getMainData { [weak self] result in
+            guard let result = self?.validateResult(result) as? MainModel else { return }
+            self?.mainData = result
         }
     }
 }

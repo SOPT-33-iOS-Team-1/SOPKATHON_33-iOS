@@ -13,7 +13,7 @@ protocol BaseTargetType: TargetType{ }
 extension BaseTargetType{
     
     var baseURL: URL {
-        return URL(string: "")!
+        return URL(string: "http://15.164.195.223:8080")!
 //        return URL(string: Config.baseURL)!
     }
     
