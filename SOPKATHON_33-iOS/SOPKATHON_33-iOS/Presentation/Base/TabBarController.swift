@@ -24,8 +24,8 @@ final class TabBarController: UITabBarController {
     }
     
     private func setTabBar() {
-        let firstVc = UIViewController()
-        let secondVc = UIViewController()
+        let firstVc = MainViewController()
+        let secondVc = ProgramViewController()
         
         firstVc.tabBarItem = UITabBarItem(title: "tab1" , image: .checkmark, tag: 0)
         secondVc.tabBarItem = UITabBarItem(title: "tab2", image: .add, tag: 1)
