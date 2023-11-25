@@ -22,6 +22,7 @@ public enum Image {
     static let ellipse3 = UIImage(named: "Ellipse 33-2")
     static let star1 = UIImage(named: "ic_card2")
     static let star2 = UIImage(named: "ic_card3")
+    static let star3 = UIImage(named: "_ic_card1")
     static let card = UIImage(named: "img_card")
     static let background = UIImage(named: "img_mainbackground")
     static let profileCard = UIImage(named: "img_profile")

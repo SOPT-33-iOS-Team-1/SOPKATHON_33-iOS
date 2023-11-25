@@ -9,9 +9,11 @@ import UIKit
 
 class GelationCollectionViewCell: UICollectionViewCell {
     
-    private var backgroundImage = UIView()
+    private var backgroundImage = UIImageView()
     private var cardTitle = UILabel()
-    private var cardIcon = UIImage()
+    private var cardIcon1 = UIImage()
+    private var cardIcon2 = UIImage()
+    private var cardIcon3 = UIImage()
     private var list1 = UILabel()
     private var list2 = UILabel()
     private var list3 = UILabel()
@@ -32,13 +34,12 @@ class GelationCollectionViewCell: UICollectionViewCell {
            fatalError("init(coder:) has not been implemented")
        }
     
-    func bindData(data: GelationData) {
-        self.backgroundImage = data.backgroundImage
-        self.cardTitle.text = data.cardTitle
-        self.list1.text = data.list1
-        self.list2.text = data.list2
-        self.list3.text = data.list3
-        self.list4.text = data.list4
+    func bindData(title: String, data: [String]) {
+        self.cardTitle.text = title
+        self.list1.text = data[0]
+        self.list2.text = data[1]
+        self.list3.text = data[2]
+        self.list4.text = data[3]
     }
     
     
@@ -53,57 +54,61 @@ class GelationCollectionViewCell: UICollectionViewCell {
         }
         
         cardTitle.snp.makeConstraints {
-            $0.leading.equalTo(backgroundImage.snp.leading).inset(23.adjusted)
-            $0.top.equalTo(backgroundImage.snp.top).inset(85.adjusted)
+            $0.leading.equalTo(backgroundImage.snp.leading).inset(25.adjusted)
+            $0.top.equalTo(backgroundImage.snp.top).inset(99.adjusted)
             $0.width.equalTo(50)
         }
         
         list1.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(150.adjusted)
+            $0.leading.equalToSuperview().inset(118.adjusted)
             $0.top.equalToSuperview().inset(20.adjusted)
         }
         
         list2.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(150.adjusted)
+            $0.leading.equalToSuperview().inset(118.adjusted)
             $0.top.equalToSuperview().inset(47.adjusted)
         }
         
         list3.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(150.adjusted)
+            $0.leading.equalToSuperview().inset(118.adjusted)
             $0.top.equalToSuperview().inset(74.adjusted)
         }
         
         list4.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(150.adjusted)
+            $0.leading.equalToSuperview().inset(118.adjusted)
             $0.top.equalToSuperview().inset(101.adjusted)
         }
         
         backgroundImage.do {
             $0.frame = CGRect(x: 0, y: 0, width: 335.adjusted, height: 205.adjusted)
-            $0.backgroundColor = .white
             $0.makeCornerRound(radius: 10)
+            $0.image = Image.card
         }
         
         cardTitle.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
-            $0.textColor = .white
+            $0.textColor = .black
             $0.numberOfLines = 0
         }
         
         list1.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
+            $0.textColor = .white
         }
         
         list2.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
+            $0.textColor = .white
         }
         
         list3.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
+            $0.textColor = .white
         }
         
         list4.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
+            $0.textColor = .white
         }
         
     }
