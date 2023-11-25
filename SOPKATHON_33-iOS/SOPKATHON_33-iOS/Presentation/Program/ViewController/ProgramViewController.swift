@@ -10,10 +10,15 @@ import UIKit
 import SnapKit
 import Then
 
-final class ProgramViewController: UIViewController {
+final class ProgramViewController: BaseViewController {
     
     //MARK: - UI Components
     
+    private var programData: [ProgramModel] = [] {
+        didSet {
+            rootView.programCollectionView.reloadData()
+        }
+    }
     private let rootView = ProgramView()
     
     //MARK: - Life Cycle
@@ -27,6 +32,7 @@ final class ProgramViewController: UIViewController {
         
         target()
         delegate()
+        requestProgramAPI()
     }
     
     private func target() {
@@ -53,6 +59,13 @@ final class ProgramViewController: UIViewController {
         print(#function)
     }
     
+    private func requestProgramAPI() {
+        MoyaAPI.shared.getProgramData() { [weak self] result in
+            guard let result = self?.validateResult(result) as? [ProgramModel] else { return }
+            self?.programData = result
+        }
+    }
+    
 }
 
 
@@ -67,7 +80,7 @@ extension ProgramViewController: UICollectionViewDelegateFlowLayout {
 
 extension ProgramViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return programData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

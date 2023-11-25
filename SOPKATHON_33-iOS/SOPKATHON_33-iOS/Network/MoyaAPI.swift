@@ -32,5 +32,14 @@ extension MoyaAPI {
                 completion: completion)
         }
     }
+    
+    public func getProgramData(completion: @escaping (NetworkResult<Any>) -> Void) {
+        provider.request(.getProgramData) { (result) in
+            self.disposeNetwork(
+                result,
+                dataModel: [ProgramModel].self,
+                completion: completion)
+        }
+    }
 }
 
