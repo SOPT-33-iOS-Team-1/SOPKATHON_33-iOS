@@ -14,13 +14,14 @@ class CustomGelationNavigationView: UIView {
     private let gelationViewbackButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
-        button.tintColor = .black
+        button.tintColor = .white
         return button
     }()
     
     private let gelationViewTitle: UILabel = {
         let label = UILabel()
         label.text = "교화 활동"
+        label.textColor = .white
         label.font =  UIFont(name: "Pretendard-SemiBold", size: 18)
         return label
     }()
@@ -38,7 +39,7 @@ class CustomGelationNavigationView: UIView {
     }
 
     private func setStyle() {
-        self.backgroundColor = .white
+        self.backgroundColor = .black
     }
     
 
