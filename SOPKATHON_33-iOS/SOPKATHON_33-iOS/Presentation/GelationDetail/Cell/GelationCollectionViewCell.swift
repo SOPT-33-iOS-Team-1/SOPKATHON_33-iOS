@@ -34,12 +34,12 @@ class GelationCollectionViewCell: UICollectionViewCell {
            fatalError("init(coder:) has not been implemented")
        }
     
-    func bindData(data: GelationData) {
-        self.cardTitle.text = data.cardTitle
-        self.list1.text = data.list1
-        self.list2.text = data.list2
-        self.list3.text = data.list3
-        self.list4.text = data.list4
+    func bindData(title: String, data: [String]) {
+        self.cardTitle.text = title
+        self.list1.text = data[0]
+        self.list2.text = data[1]
+        self.list3.text = data[2]
+        self.list4.text = data[3]
     }
     
     
@@ -87,7 +87,7 @@ class GelationCollectionViewCell: UICollectionViewCell {
         
         cardTitle.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
-            $0.textColor = .white
+            $0.textColor = .black
             $0.numberOfLines = 0
         }
         

@@ -147,4 +147,13 @@ final class IdCardView: UIView {
             $0.leading.equalToSuperview().inset(289.adjusted)
         }
     }
+    
+    func dataBind(_ data: MainModel?) {
+        guard let data else { return }
+        userName.text = data.name
+        ageChipView.infoLabel.text = "\(data.age)세"
+        genderChipView.infoLabel.text = data.gender
+        userCrimeHistory.text = data.criminalHistory
+        userCrimeYearAgo.text = data.criminalHistoryDate
+    }
 }

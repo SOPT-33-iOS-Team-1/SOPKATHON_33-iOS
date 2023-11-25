@@ -24,6 +24,10 @@ final class MainViewController: BaseViewController {
         self.setHierachy()
         self.setLayout()
         requestMainData()
+        activityCardView.progressView1.progressAnimation(duration: 1, value: 0.9)
+        activityCardView.progressView2.progressAnimation(duration: 1, value: 0.5)
+        activityCardView.progressView3.progressAnimation(duration: 1, value: 0.6)
+
     }
     
     private func setHierachy() {
@@ -47,6 +51,15 @@ final class MainViewController: BaseViewController {
         MoyaAPI.shared.getMainData { [weak self] result in
             guard let result = self?.validateResult(result) as? MainModel else { return }
             self?.mainData = result
+            self?.dataBind()
         }
+    }
+    
+    private func dataBind() {
+        DispatchQueue.main.async {
+            self.idCardView.dataBind(self.mainData)
+            self.activityCardView.activityStackView.dataBind(self.mainData)
+        }
+
     }
 }

@@ -23,5 +23,14 @@ extension MoyaAPI {
                 completion: completion)
         }
     }
+    
+    public func getGelationData(completion: @escaping (NetworkResult<Any>) -> Void) {
+        provider.request(.getGelationData) { (result) in
+            self.disposeNetwork(
+                result,
+                dataModel: GelationModel.self,
+                completion: completion)
+        }
+    }
 }
 
