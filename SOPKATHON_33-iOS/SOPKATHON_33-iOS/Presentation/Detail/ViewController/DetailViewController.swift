@@ -17,6 +17,8 @@ final class DetailViewController: UIViewController {
     private lazy var backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: nil)
     private let scrollView = UIScrollView()
     private var contentView = UIView()
+    private let titleLabel = UILabel()
+    private let bodyLabel = UILabel()
     private let applyView = UIView()
     private lazy var applyButton = UIButton()
     
@@ -48,6 +50,20 @@ extension DetailViewController {
             $0.showsVerticalScrollIndicator = false
         }
         
+        titleLabel.do {
+            $0.text = "솝트와 함께하는 플로깅 봉사솝트와 함께하는 플로깅 봉사"
+            $0.font = UIFont.boldSystemFont(ofSize: 20)
+            $0.textColor = .black
+            $0.numberOfLines = 0
+        }
+        
+        bodyLabel.do {
+            $0.text = "지역 플로깅을 통해 지역 사회에 기여하세요."
+            $0.font = UIFont.systemFont(ofSize: 12)
+            $0.textColor = .black
+            $0.numberOfLines = 0
+        }
+        
         applyView.do {
             $0.backgroundColor = .white
         }
@@ -75,6 +91,18 @@ extension DetailViewController {
             $0.edges.equalToSuperview()
             $0.width.equalToSuperview()
             $0.height.greaterThanOrEqualToSuperview()
+        }
+        
+        contentView.addSubviews(titleLabel, bodyLabel)
+        
+        titleLabel.snp.makeConstraints {
+            $0.top.equalToSuperview().inset(400)
+            $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
+        bodyLabel.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(12)
+            $0.leading.trailing.equalTo(titleLabel)
         }
         
         applyView.snp.makeConstraints {
