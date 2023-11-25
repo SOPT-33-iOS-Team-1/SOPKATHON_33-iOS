@@ -54,6 +54,7 @@
 		E5CD4BEB2B1238AC00CF9D17 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BEA2B1238AC00CF9D17 /* TabBarController.swift */; };
 		E5CD4BF02B124AD900CF9D17 /* GelationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BEF2B124AD900CF9D17 /* GelationDetailView.swift */; };
 		E5CD4BF22B124BD600CF9D17 /* GelationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BF12B124BD600CF9D17 /* GelationCollectionViewCell.swift */; };
+		E5CD4BF52B1250F800CF9D17 /* GelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BF42B1250F800CF9D17 /* GelationData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +102,7 @@
 		E5CD4BEA2B1238AC00CF9D17 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E5CD4BEF2B124AD900CF9D17 /* GelationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelationDetailView.swift; sourceTree = "<group>"; };
 		E5CD4BF12B124BD600CF9D17 /* GelationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelationCollectionViewCell.swift; sourceTree = "<group>"; };
+		E5CD4BF42B1250F800CF9D17 /* GelationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelationData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +293,7 @@
 		E5CD4BEC2B124A9100CF9D17 /* GelationDetail */ = {
 			isa = PBXGroup;
 			children = (
+				E5CD4BF32B1250E300CF9D17 /* Data */,
 				E5CD4BEE2B124ABF00CF9D17 /* Cell */,
 				E5CD4BED2B124AB000CF9D17 /* View */,
 			);
@@ -311,6 +314,14 @@
 				E5CD4BF12B124BD600CF9D17 /* GelationCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		E5CD4BF32B1250E300CF9D17 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E5CD4BF42B1250F800CF9D17 /* GelationData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -432,6 +443,7 @@
 				D28379DF2B0FBFFC00A1903B /* Adjusted+.swift in Sources */,
 				D28379CB2B0FBC5500A1903B /* UITableViewCell+.swift in Sources */,
 				E5CD4BEB2B1238AC00CF9D17 /* TabBarController.swift in Sources */,
+				E5CD4BF52B1250F800CF9D17 /* GelationData.swift in Sources */,
 				D28379C92B0FBC4B00A1903B /* UITableHeaderFooterView+.swift in Sources */,
 				D28379CF2B0FBC6900A1903B /* UIView+.swift in Sources */,
 				D206CADA2B0FB748007ECC1B /* SceneDelegate.swift in Sources */,
