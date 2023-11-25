@@ -31,6 +31,7 @@
 		D26AFFE82B127673007B90DF /* MoyaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFE72B127673007B90DF /* MoyaService.swift */; };
 		D26AFFEA2B12767B007B90DF /* MoyaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFE92B12767B007B90DF /* MoyaAPI.swift */; };
 		D26AFFEC2B127B0F007B90DF /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFEB2B127B0F007B90DF /* BaseViewController.swift */; };
+		D26AFFEE2B128915007B90DF /* GelationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFED2B128915007B90DF /* GelationModel.swift */; };
 		D28379A12B0FB83A00A1903B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A02B0FB83A00A1903B /* SnapKit */; };
 		D28379A42B0FB84300A1903B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A32B0FB84300A1903B /* Then */; };
 		D28379A72B0FB86500A1903B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A62B0FB86500A1903B /* Moya */; };
@@ -101,6 +102,7 @@
 		D26AFFE72B127673007B90DF /* MoyaService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaService.swift; sourceTree = "<group>"; };
 		D26AFFE92B12767B007B90DF /* MoyaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaAPI.swift; sourceTree = "<group>"; };
 		D26AFFEB2B127B0F007B90DF /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D26AFFED2B128915007B90DF /* GelationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelationModel.swift; sourceTree = "<group>"; };
 		D28379B82B0FBBEA00A1903B /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		D28379BA2B0FBBF500A1903B /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
 		D28379BC2B0FBC0400A1903B /* UICollectionReuseableView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionReuseableView+.swift"; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				D26AFFDF2B1275B2007B90DF /* MainModel.swift */,
+				D26AFFED2B128915007B90DF /* GelationModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				E5CD4BF72B12637800CF9D17 /* CustomNavigationBarView.swift in Sources */,
 				D28379D52B0FBDB300A1903B /* APIConstant.swift in Sources */,
 				D28379DD2B0FBE9C00A1903B /* BaseAPI.swift in Sources */,
+				D26AFFEE2B128915007B90DF /* GelationModel.swift in Sources */,
 				D28379BF2B0FBC0F00A1903B /* UICollectionViewCell++.swift in Sources */,
 				D28379D12B0FBC7600A1903B /* UIViewController+.swift in Sources */,
 				D28379CD2B0FBC5F00A1903B /* UITextField+.swift in Sources */,
