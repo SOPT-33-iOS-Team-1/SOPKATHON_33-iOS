@@ -15,6 +15,7 @@ final class DetailViewController: UIViewController {
     // MARK: - Properties
     
     private lazy var backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.backward"), style: .plain, target: self, action: nil)
+    private let backgroundImageView = UIImageView()
     private let scrollView = UIScrollView()
     private var contentView = UIView()
     private let titleLabel = UILabel()
@@ -49,6 +50,8 @@ extension DetailViewController {
     private func setStyle() {
         scrollView.do {
             $0.showsVerticalScrollIndicator = false
+            $0.alwaysBounceVertical = true
+            $0.contentInset = .init(top: 400, left: 0, bottom: 0, right: 0)
         }
         
         titleLabel.do {
@@ -83,25 +86,29 @@ extension DetailViewController {
     }
     
     private func setLayout() {
-        view.addSubviews(scrollView, applyView)
+        view.addSubviews(backgroundImageView, scrollView, applyView)
+        
+        backgroundImageView.snp.makeConstraints {
+            $0.top.leading.trailing.equalToSuperview()
+            $0.bottom.equalTo(applyView.snp.top)
+        }
         
         scrollView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
-            $0.bottom.equalTo(applyView)
+            $0.bottom.equalTo(applyView.snp.top)
         }
         
         scrollView.addSubview(contentView)
         
         contentView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.equalTo(scrollView.contentLayoutGuide)
             $0.width.equalToSuperview()
-            $0.height.greaterThanOrEqualToSuperview()
         }
         
         contentView.addSubviews(titleLabel, bodyLabel, lineView)
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(400)
+            $0.top.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(20)
         }
         
@@ -114,6 +121,7 @@ extension DetailViewController {
             $0.top.equalTo(bodyLabel.snp.bottom).offset(15)
             $0.leading.trailing.equalTo(titleLabel)
             $0.height.equalTo(0.5)
+            $0.bottom.equalToSuperview()
         }
         
         applyView.snp.makeConstraints {
