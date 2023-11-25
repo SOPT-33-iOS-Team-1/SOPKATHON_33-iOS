@@ -24,6 +24,10 @@ final class MainViewController: BaseViewController {
         self.setHierachy()
         self.setLayout()
         requestMainData()
+        activityCardView.progressView1.progressAnimation(duration: 1, value: 0.9)
+        activityCardView.progressView2.progressAnimation(duration: 1, value: 0.5)
+        activityCardView.progressView3.progressAnimation(duration: 1, value: 0.6)
+
     }
     
     private func setHierachy() {
