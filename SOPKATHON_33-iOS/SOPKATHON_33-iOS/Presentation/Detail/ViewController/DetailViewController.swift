@@ -19,6 +19,7 @@ final class DetailViewController: UIViewController {
     private var contentView = UIView()
     private let titleLabel = UILabel()
     private let bodyLabel = UILabel()
+    private let lineView = UIView()
     private let applyView = UIView()
     private lazy var applyButton = UIButton()
     
@@ -64,6 +65,10 @@ extension DetailViewController {
             $0.numberOfLines = 0
         }
         
+        lineView.do {
+            $0.backgroundColor = .black
+        }
+        
         applyView.do {
             $0.backgroundColor = .white
         }
@@ -93,7 +98,7 @@ extension DetailViewController {
             $0.height.greaterThanOrEqualToSuperview()
         }
         
-        contentView.addSubviews(titleLabel, bodyLabel)
+        contentView.addSubviews(titleLabel, bodyLabel, lineView)
         
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(400)
@@ -103,6 +108,12 @@ extension DetailViewController {
         bodyLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(12)
             $0.leading.trailing.equalTo(titleLabel)
+        }
+        
+        lineView.snp.makeConstraints {
+            $0.top.equalTo(bodyLabel.snp.bottom).offset(15)
+            $0.leading.trailing.equalTo(titleLabel)
+            $0.height.equalTo(0.5)
         }
         
         applyView.snp.makeConstraints {
