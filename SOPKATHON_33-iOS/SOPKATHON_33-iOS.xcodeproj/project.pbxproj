@@ -76,6 +76,7 @@
 		E5CD4BF22B124BD600CF9D17 /* GelationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BF12B124BD600CF9D17 /* GelationCollectionViewCell.swift */; };
 		E5CD4BF52B1250F800CF9D17 /* GelationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BF42B1250F800CF9D17 /* GelationData.swift */; };
 		E5CD4BF72B12637800CF9D17 /* CustomNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BF62B12637800CF9D17 /* CustomNavigationBarView.swift */; };
+		E5CD4BFA2B12A01B00CF9D17 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CD4BF92B12A01B00CF9D17 /* SplashView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +146,7 @@
 		E5CD4BF12B124BD600CF9D17 /* GelationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelationCollectionViewCell.swift; sourceTree = "<group>"; };
 		E5CD4BF42B1250F800CF9D17 /* GelationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GelationData.swift; sourceTree = "<group>"; };
 		E5CD4BF62B12637800CF9D17 /* CustomNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBarView.swift; sourceTree = "<group>"; };
+		E5CD4BF92B12A01B00CF9D17 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +315,7 @@
 		D28379AC2B0FBB5300A1903B /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E5CD4BF82B12A00000CF9D17 /* Splash */,
 				E5CD4BEC2B124A9100CF9D17 /* GelationDetail */,
 				A19A1F502B12450F0077ACEC /* Main */,
 				D26AFFCF2B125454007B90DF /* Program */,
@@ -483,6 +486,14 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		E5CD4BF82B12A00000CF9D17 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				E5CD4BF92B12A01B00CF9D17 /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -611,6 +622,7 @@
 				D26AFFD42B125470007B90DF /* ProgramViewController.swift in Sources */,
 				D28379D32B0FBC8900A1903B /* String+.swift in Sources */,
 				E5CD4BF02B124AD900CF9D17 /* GelationDetailView.swift in Sources */,
+				E5CD4BFA2B12A01B00CF9D17 /* SplashView.swift in Sources */,
 				D26AFFE82B127673007B90DF /* MoyaService.swift in Sources */,
 				D26AFFE02B1275B2007B90DF /* MainModel.swift in Sources */,
 				D26AFFD62B125479007B90DF /* ProgramView.swift in Sources */,
