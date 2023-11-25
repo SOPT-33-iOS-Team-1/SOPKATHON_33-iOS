@@ -18,6 +18,11 @@
 		D206CADC2B0FB748007ECC1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D206CADB2B0FB748007ECC1B /* ViewController.swift */; };
 		D206CAE12B0FB74A007ECC1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D206CAE02B0FB74A007ECC1B /* Assets.xcassets */; };
 		D206CAE42B0FB74A007ECC1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D206CAE22B0FB74A007ECC1B /* LaunchScreen.storyboard */; };
+		D26AFFD42B125470007B90DF /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFD32B12546F007B90DF /* ProgramViewController.swift */; };
+		D26AFFD62B125479007B90DF /* ProgramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFD52B125479007B90DF /* ProgramView.swift */; };
+		D26AFFD92B1254BC007B90DF /* ProgramTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFD82B1254BC007B90DF /* ProgramTopView.swift */; };
+		D26AFFDB2B125825007B90DF /* ProgramCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFDA2B125825007B90DF /* ProgramCollectionView.swift */; };
+		D26AFFDD2B125AF8007B90DF /* ProgramCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26AFFDC2B125AF8007B90DF /* ProgramCollectionViewCell.swift */; };
 		D28379A12B0FB83A00A1903B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A02B0FB83A00A1903B /* SnapKit */; };
 		D28379A42B0FB84300A1903B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A32B0FB84300A1903B /* Then */; };
 		D28379A72B0FB86500A1903B /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D28379A62B0FB86500A1903B /* Moya */; };
@@ -72,6 +77,11 @@
 		D206CAE02B0FB74A007ECC1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D206CAE32B0FB74A007ECC1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D206CAE52B0FB74A007ECC1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D26AFFD32B12546F007B90DF /* ProgramViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramViewController.swift; sourceTree = "<group>"; };
+		D26AFFD52B125479007B90DF /* ProgramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramView.swift; sourceTree = "<group>"; };
+		D26AFFD82B1254BC007B90DF /* ProgramTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramTopView.swift; sourceTree = "<group>"; };
+		D26AFFDA2B125825007B90DF /* ProgramCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCollectionView.swift; sourceTree = "<group>"; };
+		D26AFFDC2B125AF8007B90DF /* ProgramCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgramCollectionViewCell.swift; sourceTree = "<group>"; };
 		D28379AE2B0FBB7C00A1903B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		D28379B82B0FBBEA00A1903B /* UIApplication+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+.swift"; sourceTree = "<group>"; };
 		D28379BA2B0FBBF500A1903B /* UIButton+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+.swift"; sourceTree = "<group>"; };
@@ -175,6 +185,50 @@
 			path = "SOPKATHON_33-iOS";
 			sourceTree = "<group>";
 		};
+		D26AFFCF2B125454007B90DF /* Program */ = {
+			isa = PBXGroup;
+			children = (
+				D26AFFD22B125463007B90DF /* Cell */,
+				D26AFFD12B12545E007B90DF /* ViewController */,
+				D26AFFD02B125459007B90DF /* View */,
+			);
+			path = Program;
+			sourceTree = "<group>";
+		};
+		D26AFFD02B125459007B90DF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D26AFFD72B1254AA007B90DF /* AssitantView */,
+				D26AFFD52B125479007B90DF /* ProgramView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D26AFFD12B12545E007B90DF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D26AFFD32B12546F007B90DF /* ProgramViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D26AFFD22B125463007B90DF /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D26AFFDC2B125AF8007B90DF /* ProgramCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		D26AFFD72B1254AA007B90DF /* AssitantView */ = {
+			isa = PBXGroup;
+			children = (
+				D26AFFD82B1254BC007B90DF /* ProgramTopView.swift */,
+				D26AFFDA2B125825007B90DF /* ProgramCollectionView.swift */,
+			);
+			path = AssitantView;
+			sourceTree = "<group>";
+		};
 		D28379AB2B0FBB3400A1903B /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				A19A1F502B12450F0077ACEC /* Main */,
+				D26AFFCF2B125454007B90DF /* Program */,
 				E5CD4BE82B12388E00CF9D17 /* Base */,
 				D206CADB2B0FB748007ECC1B /* ViewController.swift */,
 			);
@@ -414,6 +469,8 @@
 				D28379D72B0FBDDC00A1903B /* MoyaLoggerPlugin.swift in Sources */,
 				A19A1F5B2B1255CF0077ACEC /* ActivityStackView.swift in Sources */,
 				D28379E42B0FC06C00A1903B /* SimpleResponse.swift in Sources */,
+				D26AFFDD2B125AF8007B90DF /* ProgramCollectionViewCell.swift in Sources */,
+				D26AFFDB2B125825007B90DF /* ProgramCollectionView.swift in Sources */,
 				D28379C32B0FBC2900A1903B /* UILabel+.swift in Sources */,
 				D28379C52B0FBC3700A1903B /* UINavagationController+.swift in Sources */,
 				D28379BB2B0FBBF500A1903B /* UIButton+.swift in Sources */,
@@ -428,8 +485,11 @@
 				D206CADC2B0FB748007ECC1B /* ViewController.swift in Sources */,
 				D28379C72B0FBC4100A1903B /* UIStackView+.swift in Sources */,
 				A19A1F572B12514E0077ACEC /* ActivityCardView.swift in Sources */,
+				D26AFFD42B125470007B90DF /* ProgramViewController.swift in Sources */,
 				D28379D32B0FBC8900A1903B /* String+.swift in Sources */,
+				D26AFFD62B125479007B90DF /* ProgramView.swift in Sources */,
 				D206CAD82B0FB748007ECC1B /* AppDelegate.swift in Sources */,
+				D26AFFD92B1254BC007B90DF /* ProgramTopView.swift in Sources */,
 				D28379E62B0FC08200A1903B /* GenericResponse.swift in Sources */,
 				D28379DB2B0FBE7500A1903B /* BaseTargetType.swift in Sources */,
 				D28379DF2B0FBFFC00A1903B /* Adjusted+.swift in Sources */,
