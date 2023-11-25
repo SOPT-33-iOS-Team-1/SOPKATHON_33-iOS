@@ -27,16 +27,26 @@ class GelationCollectionViewCell: UICollectionViewCell {
            fatalError("init(coder:) has not been implemented")
        }
     
+    func bindData(data: GelationData) {
+        self.backgroundImage = data.backgroundImage
+        self.cardTitle.text = data.cardTitle
+        self.list1.text = data.list1
+        self.list2.text = data.list2
+    }
+    
     private func setLayout() {
-        self.addSubviews(backgroundImage, cardTitle, list1, list2)
+        self.addSubviews(backgroundImage)
+        backgroundImage.addSubviews(cardTitle, list1, list2)
         
         backgroundImage.snp.makeConstraints {
             $0.leading.top.bottom.equalToSuperview()
+            $0.height.equalTo(205)
+            $0.width.equalTo(335)
         }
         
         cardTitle.snp.makeConstraints {
-            $0.leading.equalToSuperview().inset(23.adjusted)
-            $0.top.equalToSuperview().inset(85.adjusted)
+            $0.leading.equalTo(backgroundImage.snp.leading).inset(23.adjusted)
+            $0.top.equalTo(backgroundImage.snp.top).inset(85.adjusted)
         }
         
         list1.snp.makeConstraints {
@@ -51,10 +61,13 @@ class GelationCollectionViewCell: UICollectionViewCell {
         
         backgroundImage.do {
             $0.frame = CGRect(x: 0, y: 0, width: 335.adjusted, height: 205.adjusted)
+            $0.backgroundColor = .lightGray
+            $0.makeCornerRound(radius: 10)
         }
         
         cardTitle.do {
             $0.font = UIFont(name: "Pretendard-SemiBold", size: 14.adjusted)
+            $0.numberOfLines = 3
         }
         
         list1.do {
@@ -67,3 +80,5 @@ class GelationCollectionViewCell: UICollectionViewCell {
         
     }
 }
+
+
