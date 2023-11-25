@@ -70,11 +70,7 @@ final class ActivityCardView: UIView {
     //MARK: - set Layout
     
     private func setLayout() {
-        self.snp.makeConstraints {
-            $0.width.equalTo(335.adjusted)
-            $0.height.equalTo(405.adjusted)
-        }
-        
+
         ringImageView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(34.adjusted)
             $0.centerX.equalToSuperview()
@@ -83,6 +79,7 @@ final class ActivityCardView: UIView {
         activityStackView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(255.adjusted)
             $0.leading.equalToSuperview().inset(20.adjusted)
+            $0.trailing.equalToSuperview().inset(24.adjusted)
         }
         
         divisionLine.snp.makeConstraints {

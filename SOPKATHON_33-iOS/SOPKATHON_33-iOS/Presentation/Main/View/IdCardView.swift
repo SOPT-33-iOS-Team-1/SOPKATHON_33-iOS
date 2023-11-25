@@ -46,7 +46,7 @@ final class IdCardView: UIView {
         self.do {
             $0.frame = CGRect(x: 0, y: 0, width: 335, height: 185)
         }
-        
+
         backgroundImageView.do {
             $0.image = Image.profileCard
             $0.contentMode = .scaleAspectFill
@@ -98,59 +98,51 @@ final class IdCardView: UIView {
                          userCrimeYearAgo,
                          userImageView,
                          editProfileButton)
-        
     }
     
     //MARK: - set Layout
     
     private func setLayout() {
-        
-        self.snp.makeConstraints {
-            $0.width.equalTo(335.adjusted)
-            $0.height.equalTo(185.adjusted)
-        }
-        
+
         backgroundImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         
         userName.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(35.adjusted)
-            $0.leading.equalToSuperview().inset(25.adjusted)
+            $0.top.equalToSuperview().inset(50.adjusted)
+            $0.leading.equalToSuperview().inset(35.adjusted)
         }
         
         ageChipView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(68.adjusted)
-            $0.leading.equalToSuperview().inset(25.adjusted)
+            $0.top.equalToSuperview().inset(83.adjusted)
+            $0.leading.equalToSuperview().inset(35.adjusted)
             $0.width.equalTo(ageChipView.labelWidth)
         }
         
         genderChipView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(68.adjusted)
-            $0.leading.equalToSuperview().inset(74.adjusted)
+            $0.top.equalToSuperview().inset(83.adjusted)
+            $0.leading.equalTo(ageChipView.snp.trailing).offset(7.adjusted)
             $0.width.equalTo(genderChipView.labelWidth)
         }
 
         userCrimeHistory.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(104.adjusted)
-            $0.leading.equalToSuperview().inset(25.adjusted)
+            $0.top.equalToSuperview().inset(119)
+            $0.leading.equalToSuperview().inset(35)
         }
         
         userCrimeYearAgo.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(103.adjusted)
-            $0.leading.equalToSuperview().inset(96.adjusted)
+            $0.top.equalToSuperview().inset(118)
+            $0.leading.equalTo(userCrimeHistory.snp.trailing).offset(10.adjusted)
         }
         
         userImageView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(25.adjusted)
-            $0.trailing.equalToSuperview().inset(25.adjusted)
-            $0.width.equalTo(65.adjusted)
-            $0.height.equalTo(65.adjusted)
+            $0.top.equalToSuperview().inset(40.adjusted)
+            $0.leading.equalTo(userName.snp.trailing).offset(173.adjusted)
         }
         
         editProfileButton.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(69.adjusted)
-            $0.leading.equalToSuperview().inset(289.adjusted)
+            $0.top.equalToSuperview().inset(84.adjusted)
+            $0.leading.equalTo(genderChipView.snp.trailing).offset(178.adjusted)
         }
     }
 }

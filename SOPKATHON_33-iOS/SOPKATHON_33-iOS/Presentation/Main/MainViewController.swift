@@ -34,7 +34,7 @@ final class MainViewController: BaseViewController {
     
     private func setHierachy() {
         self.view.addSubview(backgroundImageView)
-        backgroundImageView.addSubviews(logoImageView,
+        self.view.addSubviews(logoImageView,
                                         idCardView,
                                         activityCardView)
     }
@@ -56,8 +56,10 @@ final class MainViewController: BaseViewController {
         }
         
         activityCardView.snp.makeConstraints {
-            $0.top.equalTo(idCardView.snp.bottom).offset(15.adjusted)
-            $0.centerX.equalToSuperview()
+            $0.top.equalTo(idCardView.snp.bottom).offset(1.adjusted)
+            $0.leading.equalToSuperview().inset(25.adjusted)
+            $0.trailing.equalToSuperview().inset(25.adjusted)
+            $0.height.equalTo(405.adjusted)
         }
     }
     
