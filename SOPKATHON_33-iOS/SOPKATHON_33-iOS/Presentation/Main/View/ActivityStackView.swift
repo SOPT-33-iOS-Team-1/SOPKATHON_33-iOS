@@ -30,14 +30,17 @@ final class ActivityStackView: UIStackView {
         volunteerHourItem.do {
             $0.titleLabel.text = "봉사시간"
             $0.valueLabel.text = "5시간"
+            $0.circleImageView.image = Image.ellipse1
         }
         programCompletionNumberItem.do {
             $0.titleLabel.text = "프로그램 이수"
             $0.valueLabel.text = "3개"
+            $0.circleImageView.image = Image.ellipse2
         }
         licenseNumberItem.do {
             $0.titleLabel.text = "자격증"
             $0.valueLabel.text = "2개"
+            $0.circleImageView.image = Image.ellipse3
         }
     }
     

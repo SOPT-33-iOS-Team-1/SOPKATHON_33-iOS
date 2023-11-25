@@ -14,6 +14,7 @@ final class IdCardView: UIView {
     
     //MARK: - set Properties
     
+    private let backgroundImageView = UIImageView()
     private let userName = UILabel()
     private let userCrimeHistory = UILabel()
     private let userCrimeYearAgo = UILabel()
@@ -41,9 +42,14 @@ final class IdCardView: UIView {
     //MARK: - set UI
     
     private func setUI() {
+        
         self.do {
-            $0.layer.cornerRadius = 10.adjusted
-            $0.backgroundColor = .systemYellow
+            $0.frame = CGRect(x: 0, y: 0, width: 335, height: 185)
+        }
+        
+        backgroundImageView.do {
+            $0.image = Image.profileCard
+            $0.contentMode = .scaleAspectFill
         }
         
         userName.do {
@@ -62,33 +68,29 @@ final class IdCardView: UIView {
         }
 
         userCrimeHistory.do {
-            $0.text = "범죄이력을 입력해주세요."
+            $0.text = "단순절도죄"
             $0.font = UIFont(name: "Pretendard-Regular", size: 14.adjusted)
         }
         
         userCrimeYearAgo.do {
             $0.text = "3년 전"
             $0.font = UIFont(name: "Pretendard-Regular", size: 14.adjusted)
-            $0.textColor = UIColor(red: 0.451, green: 0.471, blue: 0.494, alpha: 1)
+            $0.textColor = .gray400
         }
         
         userImageView.do {
-            // imageView 원형에 맞추기
-            $0.frame = CGRect(x: 0, y: 0, width: 65.adjusted, height: 65.adjusted)
-            $0.layer.cornerRadius = $0.frame.height / 2
-            $0.clipsToBounds = true
-            
-            $0.image = UIImage(named: "sample")
+            $0.image = Image.profile
         }
         
         editProfileButton.do {
-            $0.setImage(UIImage(named: "editProfile"), for: .normal)
+            $0.setImage(Image.camera, for: .normal)
         }
     }
     
     //MARK: - set Hierachy
     
     private func setHierachy() {
+        self.addSubview(backgroundImageView)
         self.addSubviews(userName,
                          ageChipView,
                          genderChipView,
@@ -108,6 +110,10 @@ final class IdCardView: UIView {
             $0.height.equalTo(185.adjusted)
         }
         
+        backgroundImageView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        
         userName.snp.makeConstraints {
             $0.top.equalToSuperview().inset(35.adjusted)
             $0.leading.equalToSuperview().inset(25.adjusted)
@@ -121,18 +127,18 @@ final class IdCardView: UIView {
         
         genderChipView.snp.makeConstraints {
             $0.top.equalToSuperview().inset(68.adjusted)
-            $0.leading.equalToSuperview().inset(73.adjusted)
+            $0.leading.equalToSuperview().inset(74.adjusted)
             $0.width.equalTo(genderChipView.labelWidth)
         }
 
         userCrimeHistory.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(98.adjusted)
+            $0.top.equalToSuperview().inset(104.adjusted)
             $0.leading.equalToSuperview().inset(25.adjusted)
         }
         
         userCrimeYearAgo.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(98.adjusted)
-            $0.leading.equalToSuperview().inset(173.adjusted)
+            $0.top.equalToSuperview().inset(103.adjusted)
+            $0.leading.equalToSuperview().inset(96.adjusted)
         }
         
         userImageView.snp.makeConstraints {

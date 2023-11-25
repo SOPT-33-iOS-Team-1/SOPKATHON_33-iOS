@@ -11,6 +11,9 @@ final class ActivityCardView: UIView {
     
     //MARK: - set Properties
     
+    private let backgroundImageView = UIImageView().then {
+        $0.image = Image.profileCard
+    }
     private let ringImageView = UIImageView()
     private let activityStackView = ActivityStackView()
     private let divisionLine = UIView()
@@ -35,7 +38,7 @@ final class ActivityCardView: UIView {
     
     private func setUI() {
         self.do {
-            $0.backgroundColor = .systemMint
+            $0.backgroundColor = .gray700
             $0.layer.cornerRadius = 8
         }
         
@@ -44,7 +47,7 @@ final class ActivityCardView: UIView {
         }
         
         divisionLine.do {
-            $0.setBorder(borderWidth: 1, borderColor: UIColor(red: 0.914, green: 0.922, blue: 0.929, alpha: 1))
+            $0.setBorder(borderWidth: 1, borderColor: .gray600)
         }
         showDetailButton.do {
             $0.backgroundColor = .clear
@@ -57,6 +60,7 @@ final class ActivityCardView: UIView {
     //MARK: - set Hierachy
     
     private func setHierachy() {
+        
         self.addSubviews(ringImageView,
                          activityStackView,
                          divisionLine,
