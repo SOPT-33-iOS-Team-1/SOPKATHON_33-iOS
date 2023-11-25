@@ -32,7 +32,7 @@
     </tr>
     <tr align="center">
         <td>
-            류희재 <br/>
+            류희재 아빠 <br/>
       </td>
        <td>
             김태경 <br/>
